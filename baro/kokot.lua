@@ -1,33 +1,3 @@
-local old_init = WeaponTweakData.init
-
---[[
-    local - premenna, nemoze sa zacinat cislom a ani uvodzovkami, nerozonavaju integer od textu
-        local a = 1; alebo local a = "Jack"; alebo local a = false (false = nill)
-    
-    local description = [[Hello World
-    please
-    ]-] -> cele je to jedna premenna - bez pomlcky
-    
-    a = 1 -> globalna premenna
-    _G.a = 1 -> tiez globalna premenna
-
-    print(a) -> vypise 1
-    printf(type(a)) -> vypise typ premennej (konkretne v tomto pripade integer)
-    printf()
-
-    print(math.ceil(3,648468)) -> vypise a zaoukruhli hore
-    print(math.floor(3,648468)) -> vypise a zaoukruhli dole
-    
-    print(a .. "Hello") -> vypise obsah premennej "a" a "Hello"
-
-    local x = 22
-    local y = tostring(x) -> x je cislo, y je text
-    
-    \n \t \v \\
-
-    print(string.format("pi: %.10f", math.pi))
-    ]]--
-
 function WeaponTweakData:init(tweak_data)
     old_init(self, tweak_data)
 
@@ -84,18 +54,434 @@ self.rpg7.can_shoot_through_shield = false
 self.rpg7.armor_piercing_chance = 0 			
 self.rpg7.timers.reload_not_empty = 0			--huehuehue update 0.3
 self.rpg7.timers.reload_empty = 0
---////////////////////////////////////////////////////////////////////// AK47 ////////////////////////////////////////////////////////////////////////////////
-self.ak74.AMMO_MAX = 500
-self.ak74.fire_mode_data = {fire_rate = 0.07} 	
---self.ak74.fire_mode_data = {0.02}
-self.ak74.CLIP_AMMO_MAX = 100
-self.ak74.stats.damage = 20
-self.ak74.stats.spread = 21 --???? skusobny vypocet x*4-4=80
-self.ak74.stats.recoil = 6 --???? x*4-4=20
-self.ak74.stats.concealment = 21
-self.ak74.AMMO_PICKUP = {10,100}
 --//////////////////////////////////////////////////////////////////// Mosconi 12G //////////////////////////////////////////////////////////////////////////////
 self.huntsman.CLIP_AMMO_MAX = 3
 self.huntsman.AMMO_MAX = 30
 
-end 
+self.amcar.AMMO_MAX = 54
+self.amcar.fire_mode_data = {fire_rate = 0.08}
+self.amcar.CLIP_AMMO_MAX = 30
+self.amcar.stats.damage = 55
+self.amcar.stats.spread = 0.02
+self.amcar.stats.recoil = 0.1
+self.amcar.stats.concealment = 20
+self.amcar.AMMO_PICKUP = {0.15, 0.75}
+self.amcar.can_shoot_through_enemy = false
+self.amcar.can_shoot_through_wall = false
+self.amcar.can_shoot_through_shield = false
+self.amcar.armor_piercing_chance = 0.2
+self.amcar.timers.reload_not_empty = 3.5
+self.amcar.timers.reload_empty = 2.5
+self.ak74.AMMO_MAX = 45
+self.ak74.fire_mode_data = {fire_rate = 0.1}
+self.ak74.CLIP_AMMO_MAX = 30
+self.ak74.stats.damage = 70
+self.ak74.stats.spread = 0.03
+self.ak74.stats.recoil = 0.15
+self.ak74.stats.concealment = 18
+self.ak74.AMMO_PICKUP = {0.1, 0.6}
+self.ak74.can_shoot_through_enemy = true
+self.ak74.can_shoot_through_wall = false
+self.ak74.can_shoot_through_shield = false
+self.ak74.armor_piercing_chance = 0.5
+self.ak74.timers.reload_not_empty = 3.2
+self.ak74.timers.reload_empty = 2.0
+self.new_m4.AMMO_MAX = 60
+self.new_m4.fire_mode_data = {fire_rate = 0.07}
+self.new_m4.CLIP_AMMO_MAX = 25
+self.new_m4.stats.damage = 62
+self.new_m4.stats.spread = 0.025
+self.new_m4.stats.recoil = 0.12
+self.new_m4.stats.concealment = 16
+self.new_m4.AMMO_PICKUP = {0.12, 0.65}
+self.new_m4.can_shoot_through_enemy = true
+self.new_m4.can_shoot_through_wall = true
+self.new_m4.can_shoot_through_shield = false
+self.new_m4.armor_piercing_chance = 0.4
+self.new_m4.timers.reload_not_empty = 3.8
+self.new_m4.timers.reload_empty = 2.3
+self.aug.AMMO_MAX = 42
+self.aug.fire_mode_data = {fire_rate = 0.09}
+self.aug.CLIP_AMMO_MAX = 30
+self.aug.stats.damage = 68
+self.aug.stats.spread = 0.022
+self.aug.stats.recoil = 0.11
+self.aug.stats.concealment = 17
+self.aug.AMMO_PICKUP = {0.13, 0.7}
+self.aug.can_shoot_through_enemy = true
+self.aug.can_shoot_through_wall = true
+self.aug.can_shoot_through_shield = true
+self.aug.armor_piercing_chance = 0.6
+self.aug.timers.reload_not_empty = 3.6
+self.aug.timers.reload_empty = 2.2
+self.akm.AMMO_MAX = 50
+self.akm.fire_mode_data = {fire_rate = 0.085}
+self.akm.CLIP_AMMO_MAX = 35
+self.akm.stats.damage = 75
+self.akm.stats.spread = 0.035
+self.akm.stats.recoil = 0.2
+self.akm.stats.concealment = 15
+self.akm.AMMO_PICKUP = {0.11, 0.6}
+self.akm.can_shoot_through_enemy = true
+self.akm.can_shoot_through_wall = false
+self.akm.can_shoot_through_shield = true
+self.akm.armor_piercing_chance = 0.7
+self.akm.timers.reload_not_empty = 3.9
+self.akm.timers.reload_empty = 2.4
+self.g36.AMMO_MAX = 52
+self.g36.fire_mode_data = {fire_rate = 0.08}
+self.g36.CLIP_AMMO_MAX = 30
+self.g36.stats.damage = 85
+self.g36.stats.spread = 0.1
+self.g36.stats.recoil = 0.05
+self.g36.stats.concealment = 12
+self.g36.AMMO_PICKUP = {0.2, 1.2}
+self.g36.can_shoot_through_enemy = true
+self.g36.can_shoot_through_wall = true
+self.g36.can_shoot_through_shield = true
+self.g36.armor_piercing_chance = 0.8
+self.g36.timers.reload_not_empty = 2.5
+self.g36.timers.reload_empty = 1.8
+self.ching.AMMO_MAX = 75
+self.ching.fire_mode_data = {fire_rate = 0.1}
+self.ching.CLIP_AMMO_MAX = 40
+self.ching.stats.damage = 72
+self.ching.stats.spread = 0.12
+self.ching.stats.recoil = 0.08
+self.ching.stats.concealment = 15
+self.ching.AMMO_PICKUP = {0.18, 1.2}
+self.ching.can_shoot_through_enemy = true
+self.ching.can_shoot_through_wall = true
+self.ching.can_shoot_through_shield = true
+self.ching.armor_piercing_chance = 0.7
+self.ching.timers.reload_not_empty = 3
+self.ching.timers.reload_empty = 2
+self.new_m14.AMMO_MAX = 60
+self.new_m14.fire_mode_data = {fire_rate = 0.04}
+self.new_m14.CLIP_AMMO_MAX = 10
+self.new_m14.stats.damage = 120
+self.new_m14.stats.spread = 0.08
+self.new_m14.stats.recoil = 0.06
+self.new_m14.stats.concealment = 8
+self.new_m14.AMMO_PICKUP = {0.15, 1}
+self.new_m14.can_shoot_through_enemy = true
+self.new_m14.can_shoot_through_wall = true
+self.new_m14.can_shoot_through_shield = true
+self.new_m14.armor_piercing_chance = 0.9
+self.new_m14.timers.reload_not_empty = 4
+self.new_m14.timers.reload_empty = 2.5
+self.ak5.AMMO_MAX = 3
+self.ak5.fire_mode_data = {fire_rate = 128} 	
+self.ak5.CLIP_AMMO_MAX = 1000
+self.ak5.stats.damage = 0.5			
+self.ak5.stats.spread = 2000		
+self.ak5.stats.recoil = 0	
+self.ak5.stats.concealment = 999
+self.ak5.AMMO_PICKUP = {5000, 0.01}					
+self.ak5.can_shoot_through_enemy = false 		
+self.ak5.can_shoot_through_wall = false			
+self.ak5.can_shoot_through_shield = false 		
+self.ak5.armor_piercing_chance = 1337
+self.ak5.timers.reload_not_empty = 10			
+self.ak5.timers.reload_empty = 60
+self.m16.AMMO_MAX = 5678
+self.m16.fire_mode_data = {fire_rate = 0.00001} 	
+self.m16.CLIP_AMMO_MAX = 2
+self.m16.stats.damage = 3000			
+self.m16.stats.spread = 0.0001		
+self.m16.stats.recoil = 4444	
+self.m16.stats.concealment = 1
+self.ak5.AMMO_MAX = 5555
+self.ak5.fire_mode_data = {fire_rate = 42.42}
+self.ak5.CLIP_AMMO_MAX = 3
+self.ak5.stats.damage = 0.5
+self.ak5.stats.spread = 1000
+self.ak5.stats.recoil = -10
+self.ak5.stats.concealment = 999
+self.ak5.AMMO_PICKUP = {200.1, 0.01}
+self.ak5.can_shoot_through_enemy = false
+self.ak5.can_shoot_through_wall = false
+self.ak5.can_shoot_through_shield = false
+self.ak5.armor_piercing_chance = 101
+self.ak5.timers.reload_not_empty = 0.0001
+self.ak5.timers.reload_empty = 59.59
+self.m16.AMMO_MAX = 1
+self.m16.fire_mode_data = {fire_rate = 99.99}
+self.m16.CLIP_AMMO_MAX = 456
+self.m16.stats.damage = 1234
+self.m16.stats.spread = -5
+self.m16.stats.recoil = 2000
+self.m16.stats.concealment = 0
+self.m16.AMMO_PICKUP = {0.0001, 1000}
+self.m16.can_shoot_through_enemy = true
+self.m16.can_shoot_through_wall = true
+self.m16.can_shoot_through_shield = true
+self.m16.armor_piercing_chance = 0
+self.m16.timers.reload_not_empty = 7.77
+self.m16.timers.reload_empty = 8.88
+self.komodo.AMMO_MAX = 7777
+self.komodo.fire_mode_data = {fire_rate = 0.777}
+self.komodo.CLIP_AMMO_MAX = 2
+self.komodo.stats.damage = 5678
+self.komodo.stats.spread = 12
+self.komodo.stats.recoil = -50
+self.komodo.stats.concealment = 111
+self.komodo.AMMO_PICKUP = {0.77, 77.77}
+self.komodo.can_shoot_through_enemy = false
+self.komodo.can_shoot_through_wall = false
+self.komodo.can_shoot_through_shield = true
+self.komodo.armor_piercing_chance = 50
+self.komodo.timers.reload_not_empty = 5.55
+self.komodo.timers.reload_empty = 4.44
+self.corgi.AMMO_MAX = 9999
+self.corgi.fire_mode_data = {fire_rate = 0.001}
+self.corgi.CLIP_AMMO_MAX = 789
+self.corgi.stats.damage = 0.01
+self.corgi.stats.spread = 500
+self.corgi.stats.recoil = 0
+self.corgi.stats.concealment = 50
+self.corgi.AMMO_PICKUP = {1, 1}
+self.corgi.can_shoot_through_enemy = true
+self.corgi.can_shoot_through_wall = true
+self.corgi.can_shoot_through_shield = false
+self.corgi.armor_piercing_chance = 25
+self.corgi.timers.reload_not_empty = 3.33
+self.corgi.timers.reload_empty = 2.22
+self.s552.AMMO_MAX = 1111
+self.s552.fire_mode_data = {fire_rate = 11.11}
+self.s552.CLIP_AMMO_MAX = 10
+self.s552.stats.damage = 910
+self.s552.stats.spread = 15
+self.s552.stats.recoil = 30
+self.s552.stats.concealment = 45
+self.s552.AMMO_PICKUP = {9.1, 0.9}
+self.s552.can_shoot_through_enemy = false
+self.s552.can_shoot_through_wall = false
+self.s552.can_shoot_through_shield = true
+self.s552.armor_piercing_chance = 10
+self.s552.timers.reload_not_empty = 1.23
+self.s552.timers.reload_empty = 4.56
+self.scar.AMMO_MAX = 2023
+self.scar.fire_mode_data = {fire_rate = 20.23}
+self.scar.CLIP_AMMO_MAX = 23
+self.scar.stats.damage = 202
+self.scar.stats.spread = 20
+self.scar.stats.recoil = 23
+self.scar.stats.concealment = 20
+self.scar.AMMO_PICKUP = {2.3, 0.2}
+self.scar.can_shoot_through_enemy = true
+self.scar.can_shoot_through_wall = true
+self.scar.can_shoot_through_shield = false
+self.scar.armor_piercing_chance = 5
+self.scar.timers.reload_not_empty = 0.23
+self.scar.timers.reload_empty = 2.02
+self.groza.AMMO_MAX = 3131
+self.groza.fire_mode_data = {fire_rate = 31.31}
+self.groza.CLIP_AMMO_MAX = 13
+self.groza.stats.damage = 313
+self.groza.stats.spread = 31
+self.groza.stats.recoil = 13
+self.groza.stats.concealment = 31
+self.groza.AMMO_PICKUP = {3.1, 1.3}
+self.groza.can_shoot_through_enemy = false
+self.groza.can_shoot_through_wall = true
+self.groza.can_shoot_through_shield = true
+self.groza.armor_piercing_chance = 3
+self.groza.timers.reload_not_empty = 3.13
+self.groza.timers.reload_empty = 1.31
+self.sub2000.AMMO_MAX = 10001
+self.sub2000.fire_mode_data = {fire_rate = 123.45}
+self.sub2000.CLIP_AMMO_MAX = 3
+self.sub2000.stats.damage = 0.001
+self.sub2000.stats.spread = 9999
+self.sub2000.stats.recoil = -50
+self.sub2000.stats.concealment = 200
+self.sub2000.AMMO_PICKUP = {-5, 2000}
+self.sub2000.can_shoot_through_enemy = false
+self.sub2000.can_shoot_through_wall = false
+self.sub2000.can_shoot_through_shield = false
+self.sub2000.armor_piercing_chance = 0.0001
+self.sub2000.timers.reload_not_empty = 60
+self.sub2000.timers.reload_empty = 120
+self.flint.AMMO_MAX = 7
+self.flint.fire_mode_data = {fire_rate = 0.00001}
+self.flint.CLIP_AMMO_MAX = 5000
+self.flint.stats.damage = 8000
+self.flint.stats.spread = 0.0001
+self.flint.stats.recoil = 5000
+self.flint.stats.concealment = -20
+self.flint.AMMO_PICKUP = {10000, 0.1}
+self.flint.can_shoot_through_enemy = true
+self.flint.can_shoot_through_wall = true
+self.flint.can_shoot_through_shield = true
+self.flint.armor_piercing_chance = 2
+self.flint.timers.reload_not_empty = 0.5
+self.flint.timers.reload_empty = 0.01
+self.tecci.AMMO_MAX = 2
+self.tecci.fire_mode_data = {fire_rate = 50}
+self.tecci.CLIP_AMMO_MAX = 500
+self.tecci.stats.damage = 0.5
+self.tecci.stats.spread = 10
+self.tecci.stats.recoil = 0
+self.tecci.stats.concealment = 150
+self.tecci.AMMO_PICKUP = {0, 0}
+self.tecci.can_shoot_through_enemy = false
+self.tecci.can_shoot_through_wall = false
+self.tecci.can_shoot_through_shield = true
+self.tecci.armor_piercing_chance = 10
+self.tecci.timers.reload_not_empty = 30
+self.tecci.timers.reload_empty = 3
+self.l85a2.AMMO_MAX = 31415
+self.l85a2.fire_mode_data = {fire_rate = 3.14}
+self.l85a2.CLIP_AMMO_MAX = 159
+self.l85a2.stats.damage = 2653
+self.l85a2.stats.spread = 58
+self.l85a2.stats.recoil = 979
+self.l85a2.stats.concealment = 32
+self.l85a2.AMMO_PICKUP = {38, 462}
+self.l85a2.can_shoot_through_enemy = false
+self.l85a2.can_shoot_through_wall = true
+self.l85a2.can_shoot_through_shield = false
+self.l85a2.armor_piercing_chance = 64
+self.l85a2.timers.reload_not_empty = 338
+self.l85a2.timers.reload_empty = 327
+self.famas.AMMO_MAX = 42
+self.famas.fire_mode_data = {fire_rate = 0.42}
+self.famas.CLIP_AMMO_MAX = 4242
+self.famas.stats.damage = 2400
+self.famas.stats.spread = 24
+self.famas.stats.recoil = 242
+self.famas.stats.concealment = -42
+self.famas.AMMO_PICKUP = {4, 24}
+self.famas.can_shoot_through_enemy = true
+self.famas.can_shoot_through_wall = false
+self.famas.can_shoot_through_shield = true
+self.famas.armor_piercing_chance = 242
+self.famas.timers.reload_not_empty = 42.42
+self.famas.timers.reload_empty = 4.24
+self.vhs.AMMO_MAX = 999
+self.vhs.fire_mode_data = {fire_rate = 9.99}
+self.vhs.CLIP_AMMO_MAX = 9
+self.vhs.stats.damage = 99
+self.vhs.stats.spread = 9999
+self.vhs.stats.recoil = -9
+self.vhs.stats.concealment = 999
+self.vhs.AMMO_PICKUP = {0.99, 9999}
+self.vhs.can_shoot_through_enemy = false
+self.vhs.can_shoot_through_wall = true
+self.vhs.can_shoot_through_shield = false
+self.vhs.armor_piercing_chance = 0.999
+self.vhs.timers.reload_not_empty = 99.99
+self.vhs.timers.reload_empty = 0.0999
+self.asval.AMMO_MAX = 7777
+self.asval.fire_mode_data = {fire_rate = 7.77}
+self.asval.CLIP_AMMO_MAX = 77
+self.asval.stats.damage = 777
+self.asval.stats.spread = 77777
+self.asval.stats.recoil = 7
+self.asval.stats.concealment = 77
+self.asval.AMMO_PICKUP = {0.777, 77777}
+self.asval.can_shoot_through_enemy = true
+self.asval.can_shoot_through_wall = false
+self.asval.can_shoot_through_shield = true
+self.asval.armor_piercing_chance = 0.7777
+self.asval.timers.reload_not_empty = 77.77
+self.asval.timers.reload_empty = 0.777
+self.galil.AMMO_MAX = 5000
+self.galil.fire_mode_data = {fire_rate = 7.8}
+self.galil.CLIP_AMMO_MAX = 3
+self.galil.stats.damage = 0.001
+self.galil.stats.spread = 1000
+self.galil.stats.recoil = -5
+self.galil.stats.concealment = 110
+self.galil.AMMO_PICKUP = {300, 0.001}
+self.galil.can_shoot_through_enemy = false
+self.galil.can_shoot_through_wall = false
+self.galil.can_shoot_through_shield = false
+self.galil.armor_piercing_chance = 200
+self.galil.timers.reload_not_empty = 60
+self.galil.timers.reload_empty = 120
+self.contraband.AMMO_MAX = 2
+self.contraband.fire_mode_data = {fire_rate = 60}
+self.contraband.CLIP_AMMO_MAX = 1000
+self.contraband.stats.damage = 10
+self.contraband.stats.spread = 0
+self.contraband.stats.recoil = 999
+self.contraband.stats.concealment = 0
+self.contraband.AMMO_PICKUP = {0.00001, 5000}
+self.contraband.can_shoot_through_enemy = true
+self.contraband.can_shoot_through_wall = false
+self.contraband.can_shoot_through_shield = true
+self.contraband.armor_piercing_chance = -10
+self.contraband.timers.reload_not_empty = 0.01
+self.contraband.timers.reload_empty = 2
+self.fal.AMMO_MAX = 0
+self.fal.fire_mode_data = {fire_rate = 0.0001}
+self.fal.CLIP_AMMO_MAX = 200
+self.fal.stats.damage = 999
+self.fal.stats.spread = -50
+self.fal.stats.recoil = 50
+self.fal.stats.concealment = 1
+self.fal.AMMO_PICKUP = {100, 100}
+self.fal.can_shoot_through_enemy = false
+self.fal.can_shoot_through_wall = true
+self.fal.can_shoot_through_shield = false
+self.fal.armor_piercing_chance = 50
+self.fal.timers.reload_not_empty = 10
+self.fal.timers.reload_empty = 20
+self.g3.AMMO_MAX = 1
+self.g3.fire_mode_data = {fire_rate = 20}
+self.g3.CLIP_AMMO_MAX = 500
+self.g3.stats.damage = 0.5
+self.g3.stats.spread = 300
+self.g3.stats.recoil = -100
+self.g3.stats.concealment = 90
+self.g3.AMMO_PICKUP = {0, 1000}
+self.g3.can_shoot_through_enemy = true
+self.g3.can_shoot_through_wall = false
+self.g3.can_shoot_through_shield = true
+self.g3.armor_piercing_chance = 5
+self.g3.timers.reload_not_empty = 5
+self.g3.timers.reload_empty = 30
+self.shak12.AMMO_MAX = 10000
+self.shak12.fire_mode_data = {fire_rate = 0.001}
+self.shak12.CLIP_AMMO_MAX = 1
+self.shak12.stats.damage = 2
+self.shak12.stats.spread = 50
+self.shak12.stats.recoil = 0
+self.shak12.stats.concealment = 100
+self.shak12.AMMO_PICKUP = {500, 0.1}
+self.shak12.can_shoot_through_enemy = false
+self.shak12.can_shoot_through_wall = true
+self.shak12.can_shoot_through_shield = false
+self.shak12.armor_piercing_chance = 0
+self.shak12.timers.reload_not_empty = 0.5
+self.shak12.timers.reload_empty = 1
+self.tkb.AMMO_MAX = 77
+self.tkb.fire_mode_data = {fire_rate = 5}
+self.tkb.CLIP_AMMO_MAX = 7
+self.tkb.stats.damage = 77
+self.tkb.stats.spread = 77
+self.tkb.stats.recoil = 77
+self.tkb.stats.concealment = 7
+self.tkb.AMMO_PICKUP = {7.7, 0.77}
+self.tkb.can_shoot_through_enemy = true
+self.tkb.can_shoot_through_wall = true
+self.tkb.can_shoot_through_shield = true
+self.tkb.armor_piercing_chance = 7
+self.tkb.timers.reload_not_empty = 7
+self.tkb.timers.reload_empty = 17
+self.akm_gold.AMMO_MAX = 8888
+self.akm_gold.fire_mode_data = {fire_rate = 0.888}
+self.akm_gold.CLIP_AMMO_MAX = 88
+self.akm_gold.stats.damage = 8.88
+self.akm_gold.stats.spread = 888
+self.akm_gold.stats.recoil = -8
+self.akm_gold.stats.concealment = 8
+self.akm_gold.AMMO_PICKUP = {0.08, 88}
+self.akm_gold.can_shoot_through_enemy = false
+self.akm_gold.can_shoot_through_wall = true
+self.akm_gold.can_shoot_through_shield = false
+self.akm_gold.armor_piercing_chance = 8
+self.akm_gold.timers.reload_not_empty = 0.8
+self.akm_gold.timers.reload_empty = 8
