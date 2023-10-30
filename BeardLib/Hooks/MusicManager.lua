@@ -53,17 +53,6 @@ function MusicManager:post_event(name, ...)
 	end
 end
 
-local orig_check = MusicManager.check_music_switch
-function MusicManager:check_music_switch(...)
-	local switches = tweak_data.levels:get_music_switches()
-	if switches and #switches > 0 then
-		Global.music_manager.current_track = switches[math.random(#switches)]
-		if not self:attempt_play(Global.music_manager.current_track) then
-			return orig_check(self, ...)
-		end
-	end
-end
-
 local orig_stop_all = MusicManager.stop_listen_all
 function MusicManager:stop_listen_all(...)
 	if self._current_music_ext or self._current_event then
@@ -94,7 +83,7 @@ function MusicManager:stop_listen_all(...)
 		Global.music_manager.source:post_event("stop_all_music")
 		self._current_event = nil
 		self._current_track = nil
-		self._skip_play = nil	
+		self._skip_play = nil
 	else
 		return orig_stop_all(self, ...)
 	end
@@ -124,21 +113,80 @@ function MusicManager:track_listen_stop(...)
 	end
 end
 
-function MusicManager:pick_track_index(tracks)
+-- Picks the next track of the event based on the event's play order
+function MusicManager:pick_track(event, start)
+	if event.reset then
+		event.track_index = nil
+		event.keep_index = nil
+		event.available_tracks = nil
+		event.reset = nil
+	end
+
+	local tracks = event.tracks
 	if not tracks or #tracks <= 1 then
-		return 1
+		event.track_index = 1
+	elseif event.keep_index and not start then
+		event.track_index = event.track_index or 1
+	elseif event.play_order == "sequence" or event.play_order == "loop" then
+		event.track_index = (event.track_index or 0) + 1
+		if event.track_index > #tracks then
+			event.track_index = event.play_order == "loop" and 1 or #tracks
+		end
+	elseif event.play_order == "random" then
+		event.track_index = 1
+
+		local total_w = 0
+		for _, v in ipairs(tracks) do
+			total_w = total_w + (v.weight or 1)
+		end
+		total_w = math.rand(total_w)
+
+		for i, v in ipairs(tracks) do
+			total_w = total_w - (v.weight or 1)
+			if total_w <= 0 then
+				event.track_index = i
+				break
+			end
+		end
+	elseif event.play_order == "random" or event.play_order == "shuffle" then
+		if not event.available_tracks or #event.available_tracks <= 1 then
+			event.available_tracks = {}
+			for i, _ in ipairs(tracks) do
+				table.insert(event.available_tracks, i)
+			end
+		end
+
+		if event.play_order == "shuffle" and event.track_index then
+			table.delete(event.available_tracks, event.track_index)
+		end
+
+		local total_w = 0
+		for _, i in ipairs(event.available_tracks) do
+			total_w = total_w + (tracks[i].weight or 1)
+		end
+		total_w = math.rand(total_w)
+
+		for _, i in ipairs(event.available_tracks) do
+			total_w = total_w - (tracks[i].weight or 1)
+			if total_w <= 0 then
+				event.track_index = i
+				break
+			end
+		end
+	else
+		event.track_index = 1
+		BeardLib:Err("Unsupported track playback order '%s' for music '%s'", tostring(event.play_order), tostring(self._current_custom_track))
 	end
-	local total_w = 0
-	for _,v in pairs(tracks) do
-		total_w = total_w + (v.weight or 1)
+
+	local track = tracks[event.track_index]
+	if not track then
+		BeardLib:Err("Track with index %s does not exist in event for music '%s'", tostring(event.track_index), tostring(self._current_custom_track))
+		return
 	end
-	local roll = math.random(total_w)
-	local index = 0
-	while roll > 0 do
-		index = index + 1
-		roll = roll - (tracks[index].weight or 1)
-	end
-	return index
+
+	event.keep_index = start and track.start_source
+
+	return track, event.keep_index or track.allow_switch and #tracks > 1
 end
 
 local movie_ids = Idstring("movie")
@@ -146,94 +194,101 @@ function MusicManager:attempt_play(track, event, stop)
 	if event == "music_uno_fade_reset" then
 		return
 	end
+
 	if stop then
 		self:stop_custom()
 	end
+
+	if track then
+		-- Set or clear custom track if track matches any custom music
+		if BeardLib.MusicMods[track] then
+			self._current_custom_track = track
+			for _, event_tbl in pairs(BeardLib.MusicMods[track].events) do
+				event_tbl.reset = true
+			end
+		else
+			self._current_custom_track = nil
+		end
+	end
+
 	local next_music
 	local next_event
-	if track and track ~= self._current_custom_track then
-		self._current_custom_track = nil
-	end
-	for id, music in pairs(BeardLib.MusicMods) do
-		if next_music then
-			break
-		end
-		if event == id or track == id or self._current_custom_track == id then
-			if music.tracks and (self._current_custom_track ~= id or id == event) then
-				next_music = music
-				self._current_custom_track = id
-			end
-			if music.events and event then
-				-- Try finding the right event to play
-				for modded_event, event_tbl in pairs(music.events) do
-					if event == modded_event or event:ends(modded_event) then
-						next_music = music
-						next_event = event_tbl
-						self._current_custom_track = id
-					end
+
+	if event then
+		if BeardLib.MusicMods[event] then
+			-- If event matches music id it's menu music and we can also break out of the loop
+			next_music = BeardLib.MusicMods[event]
+			next_event = next_music.preview_event
+		elseif self._current_custom_track then
+			-- Otherwise check the events of the currently playing custom music
+			next_music = BeardLib.MusicMods[self._current_custom_track]
+			for modded_event, event_tbl in pairs(next_music.events) do
+				if event == modded_event or event:ends(modded_event) then
+					next_event = event_tbl
+					break
 				end
 			end
 		end
 	end
-	if next_music then
-		local next = next_event or next_music
-		local track_index = self:pick_track_index(next.tracks)
-		local next_track = next.tracks and next.tracks[track_index]
-		local source = next_track and (next_track.start_source or next_track.source)
-		if next_music.xaudio then
-			if not source then
-				BeardLib:Err("No buffer found to play for music '%s'", tostring(self._current_custom_track))
-				return
-			end
-		else
-			if not source or not DB:has(movie_ids, source:id()) then
-				BeardLib:Err("Source file '%s' is not loaded, music id '%s'", tostring(source), tostring(self._current_custom_track))
-				return true
-			end
-		end
-		local volume = next_track.volume or next.volume or next_music.volume
-		self._switch_at_end = (next_track.start_source or next.allow_switch) and {
-			tracks = next.tracks,
-			track_index = next_track.start_source and track_index or self:pick_track_index(next.tracks),
-			allow_switch = next.allow_switch,
-			xaudio = next_music.xaudio,
-			volume = volume
-		}
-		self:play(source, next_music.xaudio, volume)
-		return true
+
+	if not next_event then
+		-- If we set a custom track return true to stop vanilla music checks
+		return track and self._current_custom_track ~= nil
 	end
-	return next_music ~= nil
+
+	local next_track, can_switch = self:pick_track(next_event, true)
+	local source = next_track and (next_track.start_source or next_track.source)
+
+	if next_music.xaudio then
+		if not source then
+			BeardLib:Err("No buffer found to play for music '%s'", tostring(self._current_custom_track))
+			return true
+		end
+	else
+		if not source or not DB:has(movie_ids, source:id()) then
+			BeardLib:Err("Source file '%s' is not loaded, music id '%s'", tostring(source), tostring(self._current_custom_track))
+			return true
+		end
+	end
+
+	self._switch_at_end = can_switch and {
+		event = next_event,
+		xaudio = next_music.xaudio
+	}
+
+	self:play(source, next_music.xaudio, next_track.volume)
+
+	return true
 end
 
 function MusicManager:play(src, use_xaudio, custom_volume)
 	self:stop_custom()
 	Global.music_manager.source:post_event("stop_all_music")
-	--Uncomment if unloading is ever needed
-	--[[if type(src) == "table" and src.module and self._last_module and self._last_module ~= src.module then
-		self._last_buffer.module:UnloadBuffers()
-	end]]
+
 	if use_xaudio then
 		if XAudio then
 			if type(src) == "table" and src.module then
+				if self._last_module and self._last_module ~= src.module then
+					self._last_module:UnloadBuffers()
+					self._last_module = nil
+				end
+
 				if not src.buffer then
-					src.module:LoadBuffers()
+					src.module:LoadBuffers(src)
 				end
 				if not src.buffer then
 					BeardLib:log("Something went wrong while trying to play the source")
 					return
 				end
-				src = src.buffer
 				self._last_module = src.module
-			else
-				self._last_module = nil
+				src = src.buffer
 			end
+			self._xa_volume = custom_volume or 1
 			self._xa_source = XAudio.Source:new(src)
 			self._xa_source:set_type("music")
 			self._xa_source:set_relative(true)
 			self._xa_source:set_looping(not self._switch_at_end)
-			if custom_volume then
-				self._xa_source:set_volume(custom_volume)
-			end
+			self._xa_source:set_volume(self._xa_volume * self._volume_mul)
 		else
 			BeardLib:log("XAudio was not found, cannot play music.")
 		end
@@ -244,15 +299,55 @@ function MusicManager:play(src, use_xaudio, custom_volume)
 			visible = false,
 			loop = not self._switch_at_end,
 		})
-		self._player:set_volume_gain(custom_volume or Global.music_manager.volume)
+		self._player_volume = custom_volume or 1
+		self._player:set_volume_gain(self._player_volume * Global.music_manager.volume * self._volume_mul)
 	end
 end
 
+function MusicManager:volume_multiplier(id)
+	return self._volume_mul_data[id] and self._volume_mul_data[id].current or 1
+end
+
+function MusicManager:set_volume_multiplier(id, volume, fade)
+	local current = (not fade or fade <= 0) and volume or self._volume_mul_data[id] and self._volume_mul_data[id].current or 1
+	self._volume_mul_data[id] = {
+		current = current,
+		a = current,
+		b = volume,
+		fade = fade or 0,
+		t = TimerManager:game():time()
+	}
+end
+
+local math_clamp = math.clamp
+local math_lerp = math.lerp
+local math_min = math.min
 function MusicManager:custom_update(t, dt, paused)
+	if not paused then
+		self._volume_mul = 1
+		for id, volume_data in pairs(self._volume_mul_data) do
+			if not volume_data.done then
+				local lerp_t = volume_data.fade > 0 and math_clamp((t - volume_data.t) / volume_data.fade, 0, 1) or 1
+				volume_data.current = math_clamp(math_lerp(volume_data.a, volume_data.b, lerp_t), 0, 1)
+				if lerp_t >= 1 then
+					if volume_data.b == 1 then
+						self._volume_mul_data[id] = nil
+					else
+						volume_data.done = true
+					end
+				end
+			end
+			self._volume_mul = math_min(self._volume_mul, volume_data.current)
+		end
+	end
+
 	local gui_ply = alive(self._player) and self._player or nil
 	if gui_ply then
-		gui_ply:set_volume_gain(Global.music_manager.volume)
+		gui_ply:set_volume_gain(self._player_volume * Global.music_manager.volume * self._volume_mul)
+	elseif self._xa_source then
+		self._xa_source:set_volume(self._xa_volume * self._volume_mul)
 	end
+
 	if paused then
 		--xaudio already pauses itself.
 		if gui_ply then
@@ -260,23 +355,25 @@ function MusicManager:custom_update(t, dt, paused)
 			gui_ply:goto_frame(gui_ply:current_frame()) --Force because the pause function is kinda broken :/
 		end
 	elseif self._switch_at_end then
-		if (self._xa_source and self._xa_source:is_closed()) or (gui_ply and gui_ply:current_frame() >= gui_ply:frames()) then
+		if self._xa_source and self._xa_source:is_closed() or gui_ply and gui_ply:current_frame() >= gui_ply:frames() then
 			local switch = self._switch_at_end
-			local source = switch.tracks[switch.track_index].source
-			local volume = switch.tracks[switch.track_index].volume or switch.volume
-			if switch.allow_switch then
-				switch.track_index = self:pick_track_index(switch.tracks)
-				switch.volume = volume
-			else
+			local next_track, can_switch = self:pick_track(switch.event)
+			if not can_switch then
 				self._switch_at_end = nil
 			end
-			self:play(source, switch.xaudio, volume)
+			self:play(next_track.source, switch.xaudio, next_track.volume)
 		end
 	end
 end
 
 --Hooks
 Hooks:PostHook(MusicManager, "init", "BeardLibMusicManagerInit", function(self)
+	self._volume_mul = 1
+	self._volume_mul_data = {}
+
+	self._player_volume = 1
+	self._xa_volume = 1
+
 	for id, music in pairs(BeardLib.MusicMods) do
 		if music.heist then
 			table.insert(tweak_data.music.track_list, {track = id})
@@ -287,6 +384,12 @@ Hooks:PostHook(MusicManager, "init", "BeardLibMusicManagerInit", function(self)
 		if music.stealth then
 			table.insert(tweak_data.music.track_ghost_list, {track = id})
 		end
+	end
+end)
+
+Hooks:PostHook(MusicManager, "check_music_switch", "BeardLibMusicManagerCheckMusicSwitch", function (self)
+	if self:attempt_play(Global.music_manager.current_track) then
+		Global.music_manager.source:stop()
 	end
 end)
 
@@ -311,7 +414,7 @@ end)
 Hooks:PostHook(MusicManager, "set_volume", "BeardLibMusicManagerSetVolume", function(self, volume)
 	--xaudio sets its own volume
 	if alive(self._player) then
-		self._player:set_volume_gain(volume)
+		self._player:set_volume_gain(self._player_volume * volume * self._volume_mul)
 	end
 end)
 

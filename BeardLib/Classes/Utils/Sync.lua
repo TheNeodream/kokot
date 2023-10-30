@@ -11,7 +11,7 @@ function Sync:SyncGameSettings(peer_id)
         else
             LuaNetworking:SendToPeers(sync_game_settings_id, data)
         end
-	managers.platform:refresh_rich_presence()
+		managers.platform:refresh_rich_presence_state()
     end
 end
 
@@ -49,8 +49,8 @@ function Sync:DownloadMap(level_name, job_id, udata, done_callback)
 					map:DownloadAssets()
 				end},
 				string.len(download_url) > 0 and {"Visit Page", function()
-					if Steam:overlay_enabled() then
-						Steam:overlay_activate("url", download_url)
+					if managers.network and managers.network.account and managers.network.account:is_overlay_enabled() then
+						managers.network.account:overlay_activate("url", download_url)
 					else
 						os.execute("cmd /c start " .. download_url)
 					end
@@ -105,14 +105,26 @@ function Sync:GetBasedOnFactoryId(id, wep)
 end
 
 function Sync:GetCleanedWeaponData(unit)
-    local player_inv = unit and unit:inventory() or managers.player:player_unit():inventory()
-    local name = tostring(player_inv:equipped_unit():base()._factory_id or player_inv:equipped_unit():name())
-    local is_npc = string.ends(name, "_npc")
-    local wep = tweak_data.weapon[managers.weapon_factory:get_weapon_id_by_factory_id(is_npc and name:gsub("_npc", "") or name)]
-    local based_on_fac = self:GetBasedOnFactoryId(nil, wep)
+    local factory_id = alive(unit) and unit:inventory():equipped_unit():base()._factory_id
 
-    local new_weap_name = (not is_npc and based_on_fac) or self.WeapConv[wep.use_data.selection_index] .. (is_npc and "_npc" or "")
-    return PlayerInventory._get_weapon_sync_index(new_weap_name), managers.weapon_factory:blueprint_to_string(new_weap_name, tweak_data.weapon.factory[new_weap_name].default_blueprint), wep.use_data.selection_index
+    -- This shouldn't ever happen unless something majorly fucked up
+    -- In that case just return some default data to not crash anyone
+    if not factory_id then
+      local new_weap_name = self.WeapConv[1]
+      local sync_index = PlayerInventory._get_weapon_sync_index(new_weap_name)
+      local blueprint_string = managers.weapon_factory:blueprint_to_string(new_weap_name, tweak_data.weapon.factory[new_weap_name].default_blueprint)
+      return sync_index, blueprint_string, 1
+    end
+
+    local is_npc = string.ends(factory_id, "_npc")
+    local weap_tweak = tweak_data.weapon[managers.weapon_factory:get_weapon_id_by_factory_id(is_npc and factory_id:gsub("_npc", "") or factory_id)]
+    local based_on_fac = self:GetBasedOnFactoryId(nil, weap_tweak)
+
+    local new_weap_name = (not is_npc and based_on_fac) or self.WeapConv[weap_tweak.use_data.selection_index] .. (is_npc and "_npc" or "")
+    local sync_index = PlayerInventory._get_weapon_sync_index(new_weap_name)
+    local blueprint_string = managers.weapon_factory:blueprint_to_string(new_weap_name, tweak_data.weapon.factory[new_weap_name].default_blueprint)
+
+    return sync_index, blueprint_string, weap_tweak.use_data.selection_index
 end
 
 function Sync:OutfitStringFromList(outfit, is_henchman)
@@ -245,7 +257,7 @@ function Sync:CleanOutfitString(str, is_henchman)
 			end
 		end
 
-        --list.grenade = self:GetSpoofedGrenade(list.grenade)
+        list.grenade = self:GetSpoofedGrenade(list.grenade)
     end
 
     local player_style = tweak_data.blackmarket.player_styles[list.player_style]
@@ -276,8 +288,7 @@ function Sync:IsCurrentJobCustom()
 end
 
 function Sync:Send(peer, name, msg)
-    local data_string = LuaNetworking.AllPeersString:gsub("{1}", LuaNetworking.AllPeers):gsub("{2}", name):gsub("{3}", msg)
-    peer:send("send_chat_message", LuaNetworking.HiddenChannel, data_string)
+    LuaNetworking:SendToPeer(peer:id(), name, msg)
 end
 
 local STRING_TO_INDEX = {

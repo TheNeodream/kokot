@@ -352,6 +352,26 @@ function BeardLibModsMenu:OpenModSettings(mod, blt_mod)
                 value = mod_settings.IgnoreUpdates,
                 on_callback = ClassClbk(self, "SetModSetting", mod)
             })
+            if mod.AssetUpdates and mod.AssetUpdates._config.optional_versions then
+                holder:ComboBox({
+                    name = "OptionalVersion",
+                    value = mod:GetSetting("OptionalVersion"),
+                    text = "beardlib_mod_optional_version",
+                    help = "beardlib_mod_optional_version_help",
+                    items_localized = false,
+                    free_typing = true, -- this isn't really needed, but string keys.
+                    on_callback = ClassClbk(self, "SetModSetting", mod),
+                    --Using string keys due to indexes sometimes not being correct, messy
+                    items = table.remap(mod.AssetUpdates._config.optional_versions,
+                    function (k, _)
+                        if type(k) == "string" and k ~= "_meta" then
+                            return k, k
+                        end
+
+                        return "stable", "stable" --can't be nil and need to add stable as an option anyways.
+                    end)
+                })
+            end
         end
     })
 end
@@ -403,6 +423,13 @@ function BeardLibModsMenu:OpenSettings()
                 text = "beardlib_dev_mode",
                 help = "beardlib_dev_mode_help",
                 value = BeardLib.Options:GetValue("DevMode"),
+                on_callback = ClassClbk(self, "SetOption")
+            })
+            holder:Toggle({
+                name = "GithubUpdates",
+                text = "beardlib_github_updates",
+                help = "beardlib_github_updates_help",
+                value = BeardLib.Options:GetValue("GithubUpdates"),
                 on_callback = ClassClbk(self, "SetOption")
             })
             holder:Toggle({

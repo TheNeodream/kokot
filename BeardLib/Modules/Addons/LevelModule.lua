@@ -1,3 +1,24 @@
+if CoreLoadingSetup then
+    LevelModule = LevelModule or BeardLib:ModuleClass("level", ItemModuleBase)
+    LevelModule.levels_folder = "levels/mods/"
+
+    function LevelModule:init(...)
+        if not LevelModule.super.init(self, ...) then  return false end
+
+        if arg and arg.load_level_data and arg.load_level_data.level_data and arg.load_level_data.level_data.level_id == self._config.id then
+            self:Load()
+        end
+    end
+
+    function LevelModule:Load()
+        if self._config.hooks then
+            HooksModule:new(self._mod, self._config.hooks)
+        end
+    end
+
+    return
+end
+
 LevelModule = LevelModule or BeardLib:ModuleClass("level", ItemModuleBase)
 LevelModule.levels_folder = "levels/mods/"
 
@@ -106,6 +127,18 @@ function LevelModule:Load()
     if self._config.hooks then
         HooksModule:new(self._mod, self._config.hooks)
     end
+
+    if self._config.classes then
+        ClassesModule:new(self._mod, self._config.classes)
+    end
+
+    if self._config.xml then
+        for _, xml in ipairs(self._config.xml) do
+            if xml.path then
+                XMLModule:new(self._mod, xml)
+            end
+        end
+    end
 end
 
 function LevelModule:AddLevelDataToTweak(l_self)
@@ -172,6 +205,16 @@ function LevelModule:RegisterHook()
             interactions:RegisterHook()
         end
 
+        if self._config.equipments then
+            local equipments = EquipmentsModule:new(self._mod, self._config.equipments)
+            equipments:RegisterHook()
+        end
+
+        if self._config.lootbags then
+            local lootbags = LootBagsModule:new(self._mod, self._config.lootbags)
+            lootbags:RegisterHook()
+        end
+
         if self._config.assets then
             if tweak_data and tweak_data.assets then
                 self:AddAssetsDataToTweak(tweak_data.assets)
@@ -209,6 +252,10 @@ function InstanceModule:init(...)
     self._world_path = Path:Combine(self.levels_folder, self._config.id, "world")
     BeardLib.Frameworks.Map._loaded_instances[self._world_path] = self --long ass line
 
+    return true
+end
+
+function InstanceModule:PostInit()
     --USED ONLY IN EDITOR!
     if Global.editor_loaded_instance then
         if Global.level_data and Global.level_data.level_id == self._levels_less_path then
@@ -216,13 +263,16 @@ function InstanceModule:init(...)
             self:Load()
         end
     end
-    return true
 end
 
 function InstanceModule:LoadPackage(package)
-    if PackageManager:package_exists(package) and not PackageManager:loaded(package) then
-        PackageManager:load(package)
-        table.insert(self._loaded_packages, package)
+    if PackageManager:package_exists(package) then
+        if not PackageManager:loaded(package) then
+            PackageManager:load(package)
+            table.insert(self._loaded_packages, package)
+        end
+    else
+        self:Warn("Attempted to load package %s, but it doesn't exist!", tostring(package))
     end
 end
 
@@ -231,11 +281,22 @@ function InstanceModule:RegisterHook()
         local interactions = InteractionsModule:new(self._mod, self._config.interactions)
         interactions:RegisterHook()
     end
+
+    if self._config.equipments then
+        local equipments = EquipmentsModule:new(self._mod, self._config.equipments)
+        equipments:RegisterHook()
+    end
+
+    if self._config.lootbags then
+        local lootbags = LootBagsModule:new(self._mod, self._config.lootbags)
+        lootbags:RegisterHook()
+    end
+    
 end
 
 function InstanceModule:Load()
-    if self._config.package then
-        for _, package in pairs(self._config.packages or self._config.custom_packages) do
+    if self._config.packages or self._config.custom_packages then
+        for _, package in ipairs(self._config.packages or self._config.custom_packages) do
             self:LoadPackage(package)
         end
     end

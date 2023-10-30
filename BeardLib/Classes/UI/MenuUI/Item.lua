@@ -281,7 +281,8 @@ function Item:WorkParams(params)
 	self:WorkParam("slider_slice", 0.7)
 	self:WorkParam("textbox_max_h", 75)
 	self:WorkParam("textbox_scroll_color")
-    self:WorkParam("scroll_speed", 48)
+	self:WorkParam("scroll_speed", 48)
+	self:WorkParam("allow_expressions", true)
 
 	if not managers.menu:is_pc_controller() then
         self.scroll_speed = self.scroll_speed * 0.5
@@ -720,7 +721,7 @@ function Item:GetItemValue(name, shallow)
 	if item then
 		return item:Value()
 	else
-		BeardLib:DevLog("[ERROR] GetItemValue didn't find item named %s")
+		BeardLib:DevLog("[ERROR] GetItemValue didn't find item named %s" , name)
 		return nil
 	end
 end
@@ -942,7 +943,7 @@ function Item:SetItemValue(name, ...)
 	if item then
 		item:SetValue(...)
 	else
-		BeardLib:DevLog("[ERROR] SetItemValue didn't find item named %s")
+		BeardLib:DevLog("[ERROR] SetItemValue didn't find item named %s", name)
 	end
 end
 

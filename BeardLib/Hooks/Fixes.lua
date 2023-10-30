@@ -96,7 +96,7 @@ elseif F == "blackmarketmanager" then
     --Fixes sorting for custom melee.
     function BlackMarketManager:get_sorted_melee_weapons(hide_locked, id_list_only)
         local items = {}
-        local global_value, td, category = nil
+        local global_value, td, category
 
         for id, item in pairs(Global.blackmarket_manager.melee_weapons) do
             td = tweak_data.blackmarket.melee_weapons[id]
@@ -112,7 +112,7 @@ elseif F == "blackmarketmanager" then
             end
         end
 
-        local xd, yd, x_td, y_td, x_sn, y_sn, x_gv, y_gv = nil
+        local xd, yd, x_td, y_td, x_sn, y_sn, x_gv, y_gv
         local m_tweak_data = tweak_data.blackmarket.melee_weapons
         local l_tweak_data = tweak_data.lootdrop.global_values
 
@@ -319,46 +319,6 @@ elseif F == "elementvehiclespawner" then
         end
         return orig_on_executed(self, ...)
     end
-elseif F == "elementareatrigger" then
-    -- Changes ElementAreaTrigger:project_instigators to read from tweak_data.carry so the lootbags aren't hardcoded into a function
-    function ElementAreaTrigger:beardlib_filter_func(carry_data, is_loot)
-        local carry_id = carry_data:carry_id()
-        if is_loot and (carry_id == "person" or carry_id == "special_person") then
-            return false
-        end
-
-        local carry = tweak_data.carry[carry_id]
-
-        if not carry or type(carry) ~= "table" or not carry.name_id then
-            return false
-        end
-
-        if (is_loot or carry.is_unique_loot) and not carry.unsecurable then
-            return true
-        end
-        return false
-    end
-    
-    ElementAreaTrigger.beardlib_project_instigators = ElementAreaTrigger.project_instigators
-    
-    function ElementAreaTrigger:project_instigators(...)
-        local is_loot = self._values.instigator == "loot"
-        if not Network:is_client() and (is_loot or self._values.instigator == "unique_loot") then
-            local instigators = {}
-    
-            local all_found = World:find_units_quick("all", 14)
-            for _, unit in ipairs(all_found) do
-                local carry_data = unit:carry_data()
-    
-                if carry_data and self:beardlib_filter_func(carry_data, is_loot) then
-                    table.insert(instigators, unit)
-                end
-            end
-    
-            return instigators
-        end
-        return ElementAreaTrigger.beardlib_project_instigators(self, ...)
-    end
 elseif F == "coresoundenvironmentmanager" then
     --From what I remember, this fixes a crash, these are useless in public.
     function CoreSoundEnvironmentManager:emitter_events(path)
@@ -382,19 +342,6 @@ elseif F == "coreelementshape"  or F == "coreelementarea" then
                 height = self._values.height,
                 radius = self._values.radius
             }))
-        end
-    end)
-elseif F == "coremenuitemslider" then
-    core:module("CoreMenuItemSlider")
-    --Although slider is supposed to have 5 decimal points(based on decomp), it's 2 by default.
-    Hooks:PostHook(ItemSlider, "init", "BeardLibSliderInit", function(self, row_item)
-        self._decimal_count = 2
-    end)
-
-    --Weirdly the decimal count value is broken, this fixes it.
-    Hooks:PostHook(ItemSlider, "reload", "BeardLibSliderReload", function(self, row_item)
-        if row_item then
-            row_item.gui_slider_text:set_text(self:show_value() and self:value_string() or string.format("%.0f", self:percentage()) .. "%")
         end
     end)
 elseif F == "raycastweaponbase" then
@@ -669,7 +616,7 @@ elseif F == "blackmarketgui" then
         local crafted_category = managers.blackmarket:get_crafted_category(category) or {}
 
         for i, index in pairs(data.on_create_data) do
-            crafted = crafted_category[index]
+            local crafted = crafted_category[index]
 
             if crafted then
                 local equipped_cosmetic_id = crafted and crafted.cosmetics and crafted.cosmetics.id
@@ -708,7 +655,7 @@ elseif F == "menunodecustomizeweaponcolorgui" then
     -- Universal icon backwards compatibility.
     Hooks:PreHook(MenuCustomizeWeaponColorInitiator, "create_grid", "BeardLibUniversalIconGridFix", function(self, node, colors_data)
         for _, color_data in pairs(colors_data) do
-            color_tweak = tweak_data.blackmarket.weapon_skins[color_data.value]
+            local color_tweak = tweak_data.blackmarket.weapon_skins[color_data.value]
 
             if color_tweak and color_tweak.universal then
                 local guis_catalog = "guis/"
@@ -725,11 +672,11 @@ elseif F == "platformmanager" then
     core:module("PlatformManager")
     -- Fixes rich presence to work with custom heists by forcing raw status.
     Hooks:PostHook(WinPlatformManager, "set_rich_presence", "FixCustomHeistStatus", function(self)
-        if not Global.game_settings.single_player and Global.game_settings.permission ~= "private" and name ~= "Idle" and managers.network.matchmake.lobby_handler  then
+        if not Global.game_settings.single_player and Global.game_settings.permission ~= "private" and name ~= "Idle" and managers.network and managers.network.matchmake.lobby_handler  then
             local job = managers.job:current_job_data()
-            if job and job.custom then
+            if job and job.custom and Steam then
                 Steam:set_rich_presence("steam_display", "#raw_status")
             end
         end
-    end) 
+    end)
 end

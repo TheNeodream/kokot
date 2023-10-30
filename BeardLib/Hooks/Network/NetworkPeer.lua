@@ -25,46 +25,53 @@ Hooks:Add(peer_send_hook, "BeardLibCustomHeistFix", function(self, func_name, pa
 end)
 
 Hooks:Add(peer_send_hook, "BeardLibCustomWeaponFix", function(self, func_name, params)
-    if self ~= managers.network:session():local_peer() then
-        if func_name == "sync_outfit" or string.ends(func_name, "set_unit") then
-            SyncUtils:Send(self, SyncConsts.SendOutfit, SyncUtils:CompactOutfit() .. "|" .. SyncConsts.OutfitVersion)
-            local in_lobby = self:in_lobby() and game_state_machine:current_state_name() ~= "ingame_lobby_menu" and not setup:is_unloading()
-            if in_lobby then
-                self:beardlib_send_modded_weapon(math.random(1, 2)) --Send a random weapon instead of based on weapon skin rarity.
-            end
+    if self == managers.network:session():local_peer() then
+        return
+    end
 
-            local extra_outfit_string = SyncUtils:ExtraOutfitString()
-            local split_number = SyncConsts.ExtraOutfitSplitSize
-            local current_sub_start = 1
-            local data_length = #extra_outfit_string
-            local index = 0
-            while current_sub_start <= data_length do
-                index = index + 1
-                SyncUtils:Send(self, SyncConsts.SendExtraOutfit .. "|" .. tostring(index), extra_outfit_string:sub(current_sub_start, current_sub_start + (split_number - 1)))
-
-                current_sub_start = current_sub_start + split_number
-            end
-
-            SyncUtils:Send(self, SyncConsts.SendExtraOutfitDone, tostring(index))
+    if func_name == "sync_outfit" or string.ends(func_name, "set_unit") then
+        SyncUtils:Send(self, SyncConsts.SendOutfit, SyncUtils:CompactOutfit() .. "|" .. SyncConsts.OutfitVersion)
+        local in_lobby = self:in_lobby() and game_state_machine:current_state_name() ~= "ingame_lobby_menu" and not setup:is_unloading()
+        if in_lobby then
+            self:beardlib_send_modded_weapon(math.random(1, 2)) --Send a random weapon instead of based on weapon skin rarity.
         end
-        if func_name == "sync_outfit" then
-            params[1] = SyncUtils:CleanOutfitString(params[1])
-        elseif string.ends(func_name, "set_unit") then
-			params[3] = SyncUtils:CleanOutfitString(params[3], params[4] == 0)
-        elseif func_name == "set_equipped_weapon" then
-            if params[2] == -1 then
-                local index, data, selection_index = SyncUtils:GetCleanedWeaponData()
-                params[2] = index
-                params[3] = data
+
+        local extra_outfit_string = SyncUtils:ExtraOutfitString()
+        local split_number = SyncConsts.ExtraOutfitSplitSize
+        local current_sub_start = 1
+        local data_length = #extra_outfit_string
+        local index = 0
+        while current_sub_start <= data_length do
+            index = index + 1
+            SyncUtils:Send(self, SyncConsts.SendExtraOutfit .. "|" .. tostring(index), extra_outfit_string:sub(current_sub_start, current_sub_start + (split_number - 1)))
+
+            current_sub_start = current_sub_start + split_number
+        end
+
+        SyncUtils:Send(self, SyncConsts.SendExtraOutfitDone, tostring(index))
+    end
+    if func_name == "sync_outfit" then
+        params[1] = SyncUtils:CleanOutfitString(params[1])
+    elseif string.ends(func_name, "set_unit") then
+        params[3] = SyncUtils:CleanOutfitString(params[3], params[4] == 0)
+    elseif func_name == "set_equipped_weapon" then
+        if params[2] == -1 then
+            local index, data, selection_index = SyncUtils:GetCleanedWeaponData(params[1])
+            params[2] = index
+            params[3] = data
+            if params[1] == managers.player:local_player() then
                 self:beardlib_send_modded_weapon(selection_index)
-            else
-				local factory_id = PlayerInventory._get_weapon_name_from_sync_index(params[2])
-				local blueprint = managers.weapon_factory:unpack_blueprint_from_string(factory_id, params[3])
-				local wep = tweak_data.weapon[managers.weapon_factory:get_weapon_id_by_factory_id(factory_id)]
+            end
+        else
+            local factory_id = PlayerInventory._get_weapon_name_from_sync_index(params[2])
+            -- Don't care about npc weapons, they dont have a blueprint
+            if type(factory_id) == "string" then
+                local blueprint = managers.weapon_factory:unpack_blueprint_from_string(factory_id, params[3])
+                local wep = tweak_data.weapon[managers.weapon_factory:get_weapon_id_by_factory_id(factory_id)]
 
-				params[3] = managers.weapon_factory:blueprint_to_string(factory_id, SyncUtils:GetCleanedBlueprint(blueprint, factory_id))
+                params[3] = managers.weapon_factory:blueprint_to_string(factory_id, SyncUtils:GetCleanedBlueprint(blueprint, factory_id))
 
-                if wep then
+                if wep and params[1] == managers.player:local_player() then
                     self:beardlib_send_modded_weapon(wep.use_data.selection_index)
                 end
             end
@@ -94,10 +101,10 @@ function NetworkPeer:beardlib_send_modded_weapon(selection_index)
 end
 
 function NetworkPeer:send(func_name, ...)
-	if not self._ip_verified then
-		return
-	end
-	local params = table.pack(...)
+    if not self._ip_verified then
+        return
+    end
+    local params = table.pack(...)
     Hooks:Call(peer_send_hook, self, func_name, params)
     NetworkPeerSend(self, func_name, unpack(params, 1, params.n))
 end
@@ -235,7 +242,7 @@ function NetworkPeer:set_equipped_weapon_beardlib(weapon_string, outfit_version,
         return
     end
 
-	local weapon = SyncUtils:UnpackBeardLibWeaponString(weapon_string)
+    local weapon = SyncUtils:UnpackBeardLibWeaponString(weapon_string)
     if weapon.id then
         local id = weapon.id.."_npc"
         local fac = tweak_data.weapon.factory
@@ -257,7 +264,7 @@ function NetworkPeer:set_equipped_weapon_beardlib(weapon_string, outfit_version,
                         for i, blueprint_part in pairs(blueprint) do
                             if blueprint_part == uses_part then
                                 ins = false
-							elseif (fac.parts[blueprint_part] and fac.parts[uses_part]) and fac.parts[blueprint_part].type == fac.parts[uses_part].type then
+                            elseif (fac.parts[blueprint_part] and fac.parts[uses_part]) and fac.parts[blueprint_part].type == fac.parts[uses_part].type then
                                 blueprint[i] = uses_part
                                 ins = false
                             end
@@ -277,17 +284,27 @@ function NetworkPeer:set_equipped_weapon_beardlib(weapon_string, outfit_version,
                 local i = self._id
                 local unit = scene._lobby_characters[self._id]
                 if alive(unit) then
-					local rank = self:rank()
+                    -- Check against cached weapon string to prevent duplicate weapon load
+                    if not scene._last_beardlib_weapon_strings then
+                        scene._last_beardlib_weapon_strings = {}
+                    elseif scene._last_beardlib_weapon_strings[self._id] == weapon_string then
+                        return true
+                    end
+                    scene._last_beardlib_weapon_strings[self._id] = weapon_string
+
+                    local local_peer = managers.network:session() and managers.network:session():local_peer()
+                    local rank = self == local_peer and managers.experience:current_rank() or self:rank()
+
                     if rank > 0 and math.random(1,5) == 1 then
-						scene:_delete_character_weapon(unit, "all")
+                        scene:_delete_character_weapon(unit, "all")
                         scene:set_character_card(i, rank, unit)
                     else
-						local guess_id = id:gsub("_npc", "")
+                        local guess_id = id:gsub("_npc", "")
                         if fac[guess_id] ~= nil then
-							scene:_delete_character_weapon(unit, "all")
-							scene:_select_lobby_character_pose(i, unit, {factory_id = id:gsub("_npc", "")})
-							scene:set_character_equipped_weapon(unit, guess_id, blueprint, "primary", weapon.cosmetics)
-						end
+                            scene:_delete_character_weapon(unit, "all")
+                            scene:_select_lobby_character_pose(i, unit, {factory_id = id:gsub("_npc", "")})
+                            scene:set_character_equipped_weapon(unit, guess_id, blueprint, "primary", weapon.cosmetics)
+                        end
                     end
                 end
             elseif alive(self._unit) then
@@ -411,24 +428,34 @@ function NetworkPeer:check_extra_outfit_string_sections()
 end
 
 function NetworkPeer:beardlib_reload_outfit()
-	local local_peer = managers.network:session() and managers.network:session():local_peer()
+    local local_peer = managers.network:session() and managers.network:session():local_peer()
     local in_lobby = local_peer and local_peer:in_lobby() and game_state_machine:current_state_name() ~= "ingame_lobby_menu" and not setup:is_unloading()
 
-	if managers.menu_scene and in_lobby then
-        managers.menu_scene:set_lobby_character_out_fit(self:id(), self._profile.outfit_string, self:rank())
+    local scene = managers.menu_scene
+    if scene and in_lobby then
+        -- Set all the stuff that's part of the compact BeardLib outift manually
+        -- Don't use set_lobby_character_out_fit as it will unload stuff and cause frame drops
+        -- and all the other stuff has been set by the game already due to regular outfit sync
+        local i = self:id()
+        local unit = scene._lobby_characters[i]
+        local outfit = managers.blackmarket:unpack_outfit_from_string(self._profile.outfit_string)
+        scene:set_character_mask_by_id(outfit.mask.mask_id, outfit.mask.blueprint, unit, i)
+        scene:set_character_armor_skin(outfit.armor_skin or "none", unit)
+        scene:set_character_player_style(outfit.player_style or "none", outfit.suit_variation or "default", unit)
+        scene:set_character_gloves(outfit.glove_id or "default", unit)
+
         if self._last_beardlib_weapon_string ~= nil then
             self:set_equipped_weapon_beardlib(self._last_beardlib_weapon_string, SyncConsts.WeaponVersion)
         end
-	end
-
-	local kit_menu = managers.menu:get_menu("kit_menu")
-
-    if kit_menu then
-		kit_menu.renderer:set_slot_outfit(self:id(), self:character(), self._profile.outfit_string)
     end
 
-	if managers.menu_component then
-		managers.menu_component:peer_outfit_updated(self:id())
+    local kit_menu = managers.menu:get_menu("kit_menu")
+    if kit_menu then
+        kit_menu.renderer:set_slot_outfit(self:id(), self:character(), self._profile.outfit_string)
+    end
+
+    if managers.menu_component then
+        managers.menu_component:peer_outfit_updated(self:id())
     end
 end
 
