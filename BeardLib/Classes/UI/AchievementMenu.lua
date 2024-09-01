@@ -57,6 +57,7 @@ function BeardLibAchievementMenu:InitPanels(parent)
 	self._package_list = self._holder:GridMenu({
 		background_color = Color.black:with_alpha(0.75),
 		inherit_values = {offset = 3},
+		auto_align = false,
 		w = w * 1/3,
 		h = h * 4/5
 	})
@@ -91,6 +92,7 @@ function BeardLibAchievementMenu:InitPanels(parent)
 
 	local ach_w = self._achievement_panel:ItemsWidth(2)
 	self._achievement_list = self._achievement_panel:GridMenu({
+		auto_align = false,
 		w = ach_w * 3/5,
 		offset = 6,
 		h = self._achievement_panel:Panel():h(),
@@ -137,19 +139,21 @@ function BeardLibAchievementMenu:InitAccount()
 	})
 	local steam_name = managers.network.account:username()
 
-	Steam:friend_avatar(2, Steam:userid(), function (texture)
-		local avatar = texture or "guis/textures/pd2/none_icon"
-		steam_avatar:SetImage(avatar)
-	end)
-
-	BeardLib:AddDelayedCall("BeardLib_Recheck_Account_Avatar", 2, function()
+	if Steam and Steam.friend_avatar then
 		Steam:friend_avatar(2, Steam:userid(), function (texture)
 			local avatar = texture or "guis/textures/pd2/none_icon"
-			if alive(steam_avatar) then
-				steam_avatar:SetImage(avatar)
-			end
+			steam_avatar:SetImage(avatar)
 		end)
-	end)
+
+		BeardLib:AddDelayedCall("BeardLib_Recheck_Account_Avatar", 2, function()
+			Steam:friend_avatar(2, Steam:userid(), function (texture)
+				local avatar = texture or "guis/textures/pd2/none_icon"
+				if alive(steam_avatar) then
+					steam_avatar:SetImage(avatar)
+				end
+			end)
+		end)
+	end
 
 	stats:Divider({
 		name = "SteamName",
@@ -190,7 +194,7 @@ function BeardLibAchievementMenu:InitAccount()
 			position = function(item)
 				item:SetCenterY(rank_icon:CenterY())
 			end,
-			font = "fonts/font_large_mf",
+			font = tweak_data.menu.pd2_large_font,
 			size = 16
 		})
 	end
@@ -236,6 +240,8 @@ function BeardLibAchievementMenu:InitPackages()
 			w = 82
 		})
 	end
+
+	panel:AlignItems(true)
 end
 
 function BeardLibAchievementMenu:DisplayAchievementsFromPackage(package)
@@ -312,9 +318,11 @@ function BeardLibAchievementMenu:DisplayAchievementsFromPackage(package)
 				w = achievement_button:Panel():w(),
 				y = achievement_button:Panel():h() - 16,
 				back_color = Color(255, 60, 60, 65) / 255,
-			}, {font = "fonts/font_medium_mf", font_size = 16}, progress)
+			}, {font = tweak_data.menu.pd2_medium_font, font_size = 16}, progress)
 		end
 	end
+
+	panel:AlignItems(true)
 
 	self:DisplayPackageHeader(package)
 end
@@ -343,12 +351,7 @@ function BeardLibAchievementMenu:DisplayPackageHeader(package)
 		banner_panel:Panel():bitmap({
 			texture = banner,
 			w = banner_panel:Panel():w(),
-			h = banner_panel:Panel():h()
-		})
-		banner_panel:Panel():bitmap({
-			w = banner_panel:Panel():w(),
 			h = banner_panel:Panel():h(),
-			color = Color.black,
 			layer = 2
 		})
 	end

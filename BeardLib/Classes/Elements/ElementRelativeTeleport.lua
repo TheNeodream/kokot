@@ -4,7 +4,11 @@ ElementRelativeTeleport = ElementRelativeTeleport or class(CoreMissionScriptElem
 -- AIGroupType Element
 -- Creator: Cpone
 
-function ElementRelativeTeleport:on_executed(instigator)
+function ElementRelativeTeleport:client_on_executed(...)
+	self:on_executed(...)
+end
+
+function ElementRelativeTeleport:on_executed(instigator, ...)
 	if not self._values.enabled then
 		return
 	end
@@ -12,6 +16,8 @@ function ElementRelativeTeleport:on_executed(instigator)
 	if self._values.target and #self._values.target > 1 then
 		return
 	end
+
+	ElementRelativeTeleport.super.on_executed(self, instigator, ...)
 
 	if instigator and alive(instigator) then
 		local instigator_position = instigator:position()

@@ -4,12 +4,15 @@ end
 
 BeardLib = {
 	Name = "BeardLib",
-	ModPath = ModPath,
+	ModPath = BeardLibModPath or ModPath,
 	SavePath = SavePath
 }
 
+BeardLibModPath = nil
+
 function BeardLib:Init()
 	Hooks:Call("BeardLibPreInit")
+
 	Global.beardlib_checked_updates = Global.beardlib_checked_updates or {}
 
 	self._call_next_update = {}
@@ -29,16 +32,26 @@ function BeardLib:Init()
 
 	self._classes_to_init = {}
 
-	dofile(ModPath.."Classes/Utils/FileIO.lua")
-	dofile(ModPath.."Classes/Utils/Utils.lua")
-	dofile(ModPath.."Classes/Utils/Path.lua")
-	self._config = FileIO:ReadConfig(ModPath.."main.xml", self)
+	dofile(self.ModPath.."Classes/Utils/FileIO.lua")
+	dofile(self.ModPath.."Classes/Utils/Utils.lua")
+	dofile(self.ModPath.."Classes/Utils/Path.lua")
+	dofile(self.ModPath.."Classes/Utils/Version.lua")
+	self._config = FileIO:ReadConfig(self.ModPath.."main.xml", self)
 	self.config = self._config
 
-	FileIO:MakeDir(self._config.maps_dir)
-
 	self:LoadClasses()
-	self:LoadModules()
+
+	local modules = self._config.modules_dir
+
+	local modules_config = table.list_to_set(self._config.load_enabled_modules)
+	self:LoadModules(modules_config, modules.."Addons/")
+	self:LoadModules(modules_config, modules.."Utils/")
+
+	if BeardLib:GetGame() == "raid" then
+		self:LoadModules(modules_config, modules.."Raid/")
+	else
+		self:LoadModules(modules_config, modules.."PD2/")
+	end
 	self:LoadLocalization()
 
 	for _, init in pairs(self._classes_to_init) do
@@ -60,10 +73,22 @@ function BeardLib:Init()
 		end
 	end
 
-	self.Version = tonumber(self.AssetUpdates.version)
+	self.Version = Version:new(self.config.version)
 	self.DevMode = self.Options:GetValue("DevMode")
 	self.LogSounds = self.Options:GetValue("LogSounds")
 	self.OptimizedMusicLoad = BeardLib.Options:GetValue("OptimizedMusicLoad")
+
+	if ModAssetsModule then
+		if self.Options:GetValue("GithubUpdates") then
+			local module = ModAssetsModule:new(self, {id = "simon-wh/PAYDAY-2-BeardLib", _meta = "AssetUpdates", important = true, provider = "github", branch = "master"})
+			self[module._name] = module
+			table.insert(self._modules, module)
+		else
+			local module = ModAssetsModule:new(self, {id = 14924, semantic_version = true, version = self.config.version, _meta = "AssetUpdates", important = true, provider = "modworkshop"})
+			self[module._name] = module
+			table.insert(self._modules, module)
+		end
+	end
 
 	self:MigrateModSettings()
 
@@ -84,16 +109,25 @@ function BeardLib:Init()
 	Hooks:Call("BeardLibPostInit")
 end
 
+--- Returns the name of the current game. If BLT is not setup to do so, assume we are in PD2.
+function BeardLib:GetGame()
+	return blt.blt_info().game or 'pd2'
+end
+
 function BeardLib:LoadClasses(config, prev_dir)
-	config = config or self._config.classes
-	local dir = Path:Combine(prev_dir or self._config.classes_dir, config.directory)
+	local wanted_meta = CoreLoadingSetup and "loading_classes" or "classes"
+
+	config = config or self._config[wanted_meta]
+	local dir = Path:Combine(prev_dir or self.ModPath, config.directory)
     for _, c in ipairs(config) do
-		if c._meta == "class" then
-			self:DevLog("Loading class", tostring(p))
-			dofile(Path:Combine(dir, c.file))
-		elseif c._meta == "classes" then
-			self:LoadClasses(c, dir)
-        end
+        if not c.game or (BeardLib:GetGame() or "pd2") == c.game then
+			if c._meta == "class" then
+				self:DevLog("Loading class %s", tostring(c.file))
+				dofile(dir and Path:Combine(dir, c.file) or c.file)
+			elseif c._meta == "classes" then
+				self:LoadClasses(c, dir)
+			end
+		end
     end
 end
 
@@ -105,21 +139,33 @@ function BeardLib:FullyLoadFrameworks()
 	end
 end
 
-function BeardLib:LoadModules(dir)
+function BeardLib:LoadModules(config, dir)
 	dir = dir or self._config.modules_dir
 	local modules = FileIO:GetFiles(dir)
 	if modules then
+		table.sort(modules) -- Sort for predicatable order on different file systems
 		for _, mdle in pairs(modules) do
-			dofile(Path:Combine(dir, mdle))
+			local dopath = Path:Combine(dir, mdle)
+			if CoreLoadingSetup then
+				local module_name = mdle:match("(.+)%..+")
+				if config[module_name] then
+					dofile(dopath)
+				end
+			else
+				dofile(dopath)
+			end
 		end
 		local folders = FileIO:GetFolders(dir)
+		table.sort(folders) -- Sort for predicatable order on different file systems
 		for _, cat in pairs(folders) do
-			self:LoadModules(Path:CombineDir(dir, cat))
+			self:LoadModules(config, Path:CombineDir(dir, cat))
 		end
 	end
 end
 
 function BeardLib:LoadLocalization()
+	if not LocalizationModule then return end
+
 	local languages = {default = "english.yaml"}
 	for _, file in pairs(FileIO:GetFiles(self._config.localization_dir)) do
 		table.insert(languages, {_meta = "localization", file = file, language = Path:GetFileNameWithoutExtension(file)})
@@ -396,23 +442,25 @@ Hooks:Add("MenuManagerOnOpenMenu", "BeardLibShowErrors", function(self, menu)
 			BeardLib:ShowErrorsDialog()
 		end
 
-		-- Add Crime.Net custo maps only button to the filters
-		function MenuCallbackHandler:beardlib_custom_maps_only(item)
-			local val = item:value() == "on"
-			BeardLib.Options:SetValue("CustomMapsOnlyFilter", val)
-			Global.game_settings.custom_maps_only = val
-			managers.network.matchmake:search_lobby(managers.network.matchmake:search_friends_only())
+		if (BeardLib:GetGame() or "pd2") == "pd2" then
+			-- Add Crime.Net custom maps only button to the filters
+			function MenuCallbackHandler:beardlib_custom_maps_only(item)
+				local val = item:value() == "on"
+				BeardLib.Options:SetValue("CustomMapsOnlyFilter", val)
+				Global.game_settings.custom_maps_only = val
+				managers.network.matchmake:search_lobby(managers.network.matchmake:search_friends_only())
+			end
+
+
+			local node = MenuHelperPlus:GetNode(nil, "crimenet_filters")
+			MenuHelperPlus:AddToggle({
+				id = "beardlib_custom_maps_only",
+				title = "beardlib_custom_maps_only",
+				node = node,
+				value = Global.game_settings.custom_maps_only,
+				position = 13,
+				callback = "beardlib_custom_maps_only",
+			})
 		end
-
-
-		local node = MenuHelperPlus:GetNode(nil, "crimenet_filters")
-		MenuHelperPlus:AddToggle({
-			id = "beardlib_custom_maps_only",
-			title = "beardlib_custom_maps_only",
-			node = node,
-			value = Global.game_settings.custom_maps_only,
-			position = 13,
-			callback = "beardlib_custom_maps_only",
-		})
 	end
 end)

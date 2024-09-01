@@ -1,0 +1,559 @@
+09:48:38 PM Log:  (C:\projects\payday2-superblt\src\debug\blt_debug.cpp:124) Command line: "D:\SteamLibrary\steamapps\common\PAYDAY 2\payday2_win32_release.exe" -NewCPU
+09:48:38 PM WARNING:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:34) Could not open signature cache file
+
+09:48:38 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:350) Scanning for signatures in payday2_win32_release.exe
+09:48:38 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_call
+09:48:38 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_pcall
+09:48:38 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_gettop
+09:48:38 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_settop
+09:48:38 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_toboolean
+09:48:39 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_tointeger
+09:48:39 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_tonumber
+09:48:40 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_tolstring
+09:48:40 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_objlen
+09:48:40 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_touserdata
+09:48:40 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function luaL_loadfilex
+09:48:40 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function luaL_loadstring
+09:48:40 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_loadx
+09:48:41 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_getfield
+09:48:41 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_setfield
+09:48:41 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_createtable
+09:48:42 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_newuserdata
+09:48:42 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_insert
+09:48:42 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_replace
+09:48:42 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_remove
+09:48:43 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_newstate
+09:48:43 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_close
+09:48:43 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_gettable
+09:48:43 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_settable
+09:48:44 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_setmetatable
+09:48:44 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_getmetatable
+09:48:44 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_pushnumber
+09:48:45 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_pushinteger
+09:48:45 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_pushboolean
+09:48:45 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_pushcclosure
+09:48:45 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_pushlstring
+09:48:46 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_pushstring
+09:48:46 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_pushfstring
+09:48:46 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_checkstack
+09:48:46 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_pushvalue
+09:48:47 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_pushnil
+09:48:47 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function luaI_openlib
+09:48:47 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function luaL_ref
+09:48:47 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_rawget
+09:48:48 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_rawset
+09:48:48 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_rawgeti
+09:48:48 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_rawseti
+09:48:49 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_type
+09:48:49 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_typename
+09:48:49 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function luaL_unref
+09:48:49 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_equal
+09:48:49 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function luaL_newmetatable
+09:48:50 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function luaL_checkudata
+09:48:50 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function luaL_error
+09:48:50 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lua_error
+09:48:50 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function node_from_xml
+09:48:50 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function do_game_update
+09:48:50 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function luaL_newstate
+09:48:50 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function Archive_ctor
+09:48:51 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function lj_cf_rawset
+09:48:51 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:379) Sigcache hit failed for function index2adr
+09:48:51 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:293) Found signature #1 for asset loading at 4593984
+09:48:51 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:293) Found signature #2 for asset loading at 5070080
+09:48:52 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:293) Found signature #3 for asset loading at 7847280
+09:48:52 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:293) Found signature #4 for asset loading at 8511904
+09:48:52 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:402) Scanned for 56 signatures in 14697 milliseconds with 57 cache misses
+09:48:52 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:406) Saving signature cache
+09:48:52 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:117) Saving 61 signatures
+09:48:52 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:133) Done saving signatures
+09:48:52 PM Log:  (C:\projects\payday2-superblt\src\dbutil\DB.cpp:127) Start loading DB info
+09:48:53 PM WARNING:  (C:\projects\payday2-superblt\src\tweaker\wrenloader.cpp:486) Wren base file not found, Wren VM disabled - the basemod may be corrupted
+
+09:48:55 PM Log:  (C:\projects\payday2-superblt\src\dbutil\DB.cpp:242) Finished loading DB info: 272765 files in 2363 ms
+09:48:57 PM Log:  (C:\projects\payday2-superblt\src\util\compression.cpp:169) Extracting blt_basemod_download.zip to mods
+09:49:06 PM Log:  (C:\projects\payday2-superblt\src\debug\blt_debug.cpp:124) Command line: "D:\SteamLibrary\steamapps\common\PAYDAY 2\payday2_win32_release.exe" -NewCPU
+09:49:06 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:350) Scanning for signatures in payday2_win32_release.exe
+09:49:06 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:402) Scanned for 56 signatures in 1 milliseconds with 0 cache misses
+09:49:06 PM Log:  (C:\projects\payday2-superblt\src\dbutil\DB.cpp:127) Start loading DB info
+09:49:06 PM Log:  (C:\projects\payday2-superblt\src\tweaker\wrenloader.cpp:49) [WREN] Loading module BeardLib/AssetLoader
+09:49:06 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:49:07 PM Log:  (C:\projects\payday2-superblt\src\dbutil\DB.cpp:242) Finished loading DB info: 272765 files in 775 ms
+09:49:10 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1038) Checking for updates
+09:49:10 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+09:49:10 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+09:49:10 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/.git/
+09:49:10 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+09:49:10 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+09:49:10 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+09:49:10 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+09:49:10 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/.git/
+09:49:10 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+09:49:10 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+09:49:10 PM Log:  (C:\projects\payday2-superblt\src\xaudio\XAudio.cpp:142) Loaded OpenAL XAudio API
+09:49:10 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:300) mods/baro/kokot.lua:488: 'end' expected (to close 'function' at line 1) near '<eof>'
+
+09:49:10 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "lib/tweak_data/tweakdata.lua"]:4: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "lib/setups/setup.lua"]:45: in main chunk
+	...
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "lib/entry.lua"]:13: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+09:49:10 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "lib/setups/setup.lua"]:77: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "lib/entry.lua"]:13: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+09:49:12 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:49:12 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+09:49:12 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+09:49:12 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+09:49:12 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+09:49:12 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+09:49:12 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+09:49:12 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+09:49:12 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+09:49:12 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+09:49:12 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/.git/
+09:49:12 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+09:49:12 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+09:49:12 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+09:49:12 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+09:49:12 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+09:49:12 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+09:49:12 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+09:49:12 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+09:49:12 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+09:49:20 PM Log:  (C:\projects\payday2-superblt\src\xaudio\XAudio.cpp:147) Closing OpenAL XAudio API
+09:51:32 PM Log:  (C:\projects\payday2-superblt\src\debug\blt_debug.cpp:124) Command line: "D:\SteamLibrary\steamapps\common\PAYDAY 2\payday2_win32_release.exe" -NewCPU
+09:51:32 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:350) Scanning for signatures in payday2_win32_release.exe
+09:51:32 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:402) Scanned for 56 signatures in 1 milliseconds with 0 cache misses
+09:51:32 PM Log:  (C:\projects\payday2-superblt\src\dbutil\DB.cpp:127) Start loading DB info
+09:51:32 PM Log:  (C:\projects\payday2-superblt\src\tweaker\wrenloader.cpp:49) [WREN] Loading module BeardLib/AssetLoader
+09:51:32 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:51:33 PM Log:  (C:\projects\payday2-superblt\src\dbutil\DB.cpp:242) Finished loading DB info: 272765 files in 800 ms
+09:51:35 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1038) Checking for updates
+09:51:35 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+09:51:35 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+09:51:35 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/.git/
+09:51:35 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+09:51:35 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+09:51:35 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+09:51:35 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+09:51:35 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/.git/
+09:51:35 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+09:51:35 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+09:51:35 PM Log:  (C:\projects\payday2-superblt\src\xaudio\XAudio.cpp:142) Loaded OpenAL XAudio API
+09:51:35 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:300) mods/baro/kokot.lua:488: 'end' expected (to close 'function' at line 1) near '<eof>'
+
+09:51:35 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "lib/tweak_data/tweakdata.lua"]:4: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "lib/setups/setup.lua"]:45: in main chunk
+	...
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "lib/entry.lua"]:13: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+09:51:36 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "lib/setups/setup.lua"]:77: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "lib/entry.lua"]:13: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:373: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+09:51:37 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:51:37 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+09:51:37 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+09:51:37 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+09:51:37 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+09:51:37 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+09:51:37 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+09:51:37 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+09:51:37 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+09:51:37 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+09:51:37 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/.git/
+09:51:37 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+09:51:37 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+09:51:37 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+09:51:37 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+09:51:37 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+09:51:37 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+09:51:37 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+09:51:37 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+09:51:37 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+09:51:43 PM Log:  (C:\projects\payday2-superblt\src\xaudio\XAudio.cpp:147) Closing OpenAL XAudio API
+09:52:40 PM Log:  (C:\projects\payday2-superblt\src\debug\blt_debug.cpp:124) Command line: "D:\SteamLibrary\steamapps\common\PAYDAY 2\payday2_win32_release.exe" -NewCPU
+09:52:40 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:350) Scanning for signatures in payday2_win32_release.exe
+09:52:40 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:402) Scanned for 56 signatures in 1 milliseconds with 0 cache misses
+09:52:40 PM Log:  (C:\projects\payday2-superblt\src\dbutil\DB.cpp:127) Start loading DB info
+09:52:41 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:52:41 PM Log:  (C:\projects\payday2-superblt\src\dbutil\DB.cpp:242) Finished loading DB info: 272765 files in 782 ms
+09:52:44 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1038) Checking for updates
+09:52:44 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+09:52:44 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+09:52:44 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/.git/
+09:52:44 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+09:52:44 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+09:52:44 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+09:52:44 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/.git/
+09:52:44 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+09:52:44 PM Log:  (C:\projects\payday2-superblt\src\xaudio\XAudio.cpp:142) Loaded OpenAL XAudio API
+09:52:44 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:300) mods/baro/kokot.lua:488: 'end' expected (to close 'function' at line 1) near '<eof>'
+
+09:52:44 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'require'
+	[string "lib/tweak_data/tweakdata.lua"]:4: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'require'
+	[string "lib/setups/setup.lua"]:45: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'require'
+	[string "lib/entry.lua"]:13: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+09:52:44 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'require'
+	[string "lib/setups/setup.lua"]:77: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'require'
+	[string "lib/entry.lua"]:13: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+09:52:44 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+09:52:44 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+09:52:44 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+09:52:44 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/.git/
+09:52:44 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+09:52:44 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+09:52:52 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://sblt-update.znix.xyz/pd2update/updates/meta.php?id=payday2blt
+09:52:52 PM Log:  (C:\projects\payday2-superblt\src\http\http.cpp:39) CURL_INITD
+09:52:52 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://sblt-update.znix.xyz/pd2update/updates/meta.php?id=payday2bltwsockdll
+09:52:53 PM Lua: [INFO] [Updates] Received update data for 'payday2blt'
+09:52:53 PM Lua: [INFO] [Updates] Received update data for 'payday2bltwsockdll'
+09:52:53 PM Lua: [INFO] [Updates] Comparing hash data for 'payday2bltwsockdll':
+Server: 8cab3518a8afd41feb6ae1214112cd957e10dc9f0f6236d4766f0635e5301344
+ Local: 8cab3518a8afd41feb6ae1214112cd957e10dc9f0f6236d4766f0635e5301344
+09:53:25 PM Log:  (C:\projects\payday2-superblt\src\http\http.cpp:44) CURL CLOSED
+09:53:25 PM Log:  (C:\projects\payday2-superblt\src\xaudio\XAudio.cpp:147) Closing OpenAL XAudio API
+09:55:44 PM Log:  (C:\projects\payday2-superblt\src\debug\blt_debug.cpp:124) Command line: "D:\SteamLibrary\steamapps\common\PAYDAY 2\payday2_win32_release.exe" -NewCPU
+09:55:44 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:350) Scanning for signatures in payday2_win32_release.exe
+09:55:44 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:402) Scanned for 56 signatures in 1 milliseconds with 0 cache misses
+09:55:44 PM Log:  (C:\projects\payday2-superblt\src\dbutil\DB.cpp:127) Start loading DB info
+09:55:44 PM Log:  (C:\projects\payday2-superblt\src\tweaker\wrenloader.cpp:49) [WREN] Loading module BeardLib/AssetLoader
+09:55:44 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:55:46 PM Log:  (C:\projects\payday2-superblt\src\dbutil\DB.cpp:242) Finished loading DB info: 272765 files in 2242 ms
+09:55:47 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1038) Checking for updates
+09:55:47 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+09:55:47 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+09:55:47 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/.git/
+09:55:47 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+09:55:47 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+09:55:47 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+09:55:47 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+09:55:47 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/.git/
+09:55:47 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+09:55:47 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+09:55:48 PM Log:  (C:\projects\payday2-superblt\src\xaudio\XAudio.cpp:142) Loaded OpenAL XAudio API
+09:55:48 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:300) mods/baro/kokot.lua:488: 'end' expected (to close 'function' at line 1) near '<eof>'
+
+09:55:48 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/tweak_data/tweakdata.lua"]:4: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:45: in main chunk
+	...
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:13: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+09:55:48 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:77: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:13: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+09:55:49 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+09:55:49 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+09:55:49 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+09:55:49 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+09:55:49 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+09:55:49 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+09:55:49 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+09:55:49 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+09:55:49 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+09:55:49 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+09:55:49 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/.git/
+09:55:49 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+09:55:49 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+09:55:49 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+09:55:49 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+09:55:49 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+09:55:49 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+09:55:49 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+09:55:49 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+09:55:49 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+09:56:05 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://api.modworkshop.net/mods/14924/version
+09:56:05 PM Log:  (C:\projects\payday2-superblt\src\http\http.cpp:39) CURL_INITD
+09:56:05 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://api.modworkshop.net/mods/23127/version
+09:56:05 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://api.modworkshop.net/mods/24616/version
+09:56:05 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://api.modworkshop.net/mods/17160/version
+09:56:05 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://sblt-update.znix.xyz/pd2update/updates/meta.php?id=payday2blt
+09:56:05 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://sblt-update.znix.xyz/pd2update/updates/meta.php?id=payday2bltwsockdll
+09:56:05 PM Lua: [INFO] [Updates] Received update data for 'payday2blt'
+09:56:05 PM Lua: [INFO] [Updates] Received update data for 'payday2bltwsockdll'
+09:56:05 PM Lua: [INFO] [Updates] Comparing hash data for 'payday2bltwsockdll':
+Server: 8cab3518a8afd41feb6ae1214112cd957e10dc9f0f6236d4766f0635e5301344
+ Local: 8cab3518a8afd41feb6ae1214112cd957e10dc9f0f6236d4766f0635e5301344
+09:56:28 PM Log:  (C:\projects\payday2-superblt\src\http\http.cpp:44) CURL CLOSED
+09:56:28 PM Log:  (C:\projects\payday2-superblt\src\xaudio\XAudio.cpp:147) Closing OpenAL XAudio API

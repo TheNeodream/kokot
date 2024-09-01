@@ -117,9 +117,16 @@ BeardLibPackageManager.UNIT_SHORTCUTS = {
 
 BeardLibPackageManager.TEXTURE_SHORTCUTS = {
     df_nm = {"_df", "_nm"},
+    df_op = {"_df", "_op"},
+    df_il = {"_df", "_il"},
+    df_nm_mask = {"_df", "_nm", "_mask"},
+    df_nm_il = {"_df", "_nm", "_il"},
+    df_nm_op = {"_df", "_nm", "_op"},
     df_nm_cc = {"_df", "_nm", "_df_cc"},
     df_nm_cc_gsma = {"_df", "_nm", "_df_cc", "_gsma"},
     df_nm_gsma = {"_df", "_nm", "_gsma"},
+    df_nm_gsma_op = {"_df", "_nm", "_gsma", "_op"},
+    df_nm_gsma_il = {"_df", "_nm", "_gsma", "_il"},
 }
 
 BeardLibPackageManager.EXT_CONVERT = {dds = "texture", png = "texture", tga = "texture", jpg = "texture", bik = "movie"}
@@ -155,6 +162,8 @@ function BeardLibPackageManager:LoadConfig(directory, config, mod, settings)
     local ingame = Global.level_data and Global.level_data.level_id ~= nil
     local inmenu = not ingame
 
+    local game = BeardLib:GetGame() or "pd2"
+
     local loading = {}
     for _, child in ipairs(config) do
         if type(child) == "table" then
@@ -166,9 +175,12 @@ function BeardLibPackageManager:LoadConfig(directory, config, mod, settings)
             if use_clbk and mod then
                 use_clbk = mod:StringToCallback(use_clbk) or nil
             end
-            if not use_clbk or use_clbk(path, typ) then
+
+            local c_game = child.game or config.game
+
+            if (not c_game or c_game == game) and (not use_clbk or use_clbk(path, typ)) then
                 if typ == UNIT_LOAD or typ == ADD then
-                    self:LoadConfig(directory, child, mod, {skip_use_clbk = true, temp = temp})
+                    self:LoadConfig(child.directory and Path:Combine(directory, child.directory) or directory, child, mod, {skip_use_clbk = true, temp = temp})
                 elseif BeardLibPackageManager.UNIT_SHORTCUTS[typ] then
                     local ids_path = Idstring(path)
                     local file_path = child.full_path or Path:Combine(directory, child.file_path or path)
@@ -298,8 +310,52 @@ function BeardLibPackageManager:UnloadConfig(config)
         if type(child) == "table" then
             local typ = child._meta
             local path = child.path
-            if typ == "unit_load" or typ == "add" then
+            if typ == UNIT_LOAD or typ == ADD then
                 self:UnloadConfig(child)
+            elseif BeardLibPackageManager.UNIT_SHORTCUTS[typ] then
+                local function unload(ids_ext, ids_path)
+                    if DB:has(ids_ext, ids_path) then
+                        if child.unload ~= false then
+                            Managers.File:UnloadAsset(ids_ext, ids_path)
+                        end
+                        Managers.File:RemoveFile(ids_ext, ids_path)
+                    end
+                end
+                
+                path = Path:Normalize(path)
+                local ids_path = Idstring(path)
+                local auto_cp = NotNil(child.auto_cp, config.auto_cp, true)
+
+                unload(UNIT_IDS, ids_path)
+                if auto_cp then
+                    unload(COOKED_PHYSICS_IDS, ids_path)
+                end
+                
+                unload(MODEL_IDS, ids_path)
+                unload(OBJECT_IDS, ids_path)
+
+                for load_type, load in pairs(BeardLibPackageManager.UNIT_SHORTCUTS[typ]) do
+                    local type_ids = load_type:id()
+                    if load_type ~= TEXTURE then
+                        unload(type_ids, Idstring(path))
+                    end
+                    if type(load) == "table" then
+                        for _, suffix in pairs(load) do
+                            unload(type_ids, Idstring(path..suffix))
+                        end
+                    end
+                end
+            elseif BeardLibPackageManager.TEXTURE_SHORTCUTS[typ] then
+                path = Path:Normalize(path)
+                for _, suffix in pairs(BeardLibPackageManager.TEXTURE_SHORTCUTS[typ]) do
+                    local ids_path = Idstring(path..suffix)
+                    if DB:has(TEXTURE_IDS, ids_path) then
+                        if child.unload ~= false then
+                            Managers.File:UnloadAsset(TEXTURE_IDS, ids_path)
+                        end
+                        Managers.File:RemoveFile(TEXTURE_IDS, ids_path)
+                    end
+                end
             elseif typ and path then
                 path = Path:Normalize(path)
                 local ids_ext = Idstring(self.EXT_CONVERT[typ] or typ)

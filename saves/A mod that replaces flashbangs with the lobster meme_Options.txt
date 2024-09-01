@@ -1,0 +1,1 @@
+{	"__picture_fadeout":true,	"__volume_fadeout":true,	"__volume_start":1}

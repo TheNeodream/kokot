@@ -54,7 +54,7 @@ function BeardLibModsMenu:CreateItems(menu)
         count_as_aligned = true,
         size = 32
     })
-    local text =  self._top:FitDivider({
+    self._top:FitDivider({
         name = "title",
         size = 24,
         position = "Centery",
@@ -273,6 +273,9 @@ function BeardLibModsMenu:AddMod(mod, framework)
             })
         end
     else
+        if updates[1] then
+            text("Title", loc:text("beardlib_version", {version = tostring(updates[1].version)}), {text_align = "center"})
+        end
         mod_item:Button({
             name = "Download",
             on_callback = ClassClbk(self, "BeginModDownload", updates[1]),
@@ -352,6 +355,26 @@ function BeardLibModsMenu:OpenModSettings(mod, blt_mod)
                 value = mod_settings.IgnoreUpdates,
                 on_callback = ClassClbk(self, "SetModSetting", mod)
             })
+            if mod.AssetUpdates and mod.AssetUpdates._config.optional_versions then
+                holder:ComboBox({
+                    name = "OptionalVersion",
+                    value = mod:GetSetting("OptionalVersion"),
+                    text = "beardlib_mod_optional_version",
+                    help = "beardlib_mod_optional_version_help",
+                    items_localized = false,
+                    free_typing = true, -- this isn't really needed, but string keys.
+                    on_callback = ClassClbk(self, "SetModSetting", mod),
+                    --Using string keys due to indexes sometimes not being correct, messy
+                    items = table.remap(mod.AssetUpdates._config.optional_versions,
+                    function (k, _)
+                        if type(k) == "string" and k ~= "_meta" then
+                            return k, k
+                        end
+
+                        return "stable", "stable" --can't be nil and need to add stable as an option anyways.
+                    end)
+                })
+            end
         end
     })
 end
@@ -403,6 +426,13 @@ function BeardLibModsMenu:OpenSettings()
                 text = "beardlib_dev_mode",
                 help = "beardlib_dev_mode_help",
                 value = BeardLib.Options:GetValue("DevMode"),
+                on_callback = ClassClbk(self, "SetOption")
+            })
+            holder:Toggle({
+                name = "GithubUpdates",
+                text = "beardlib_github_updates",
+                help = "beardlib_github_updates_help",
+                value = BeardLib.Options:GetValue("GithubUpdates"),
                 on_callback = ClassClbk(self, "SetOption")
             })
             holder:Toggle({
@@ -573,7 +603,7 @@ function BeardLibModsMenu:SetModNeedsUpdate(module, new_version)
                 if item.update == module then
                     item:SetIndex(1)
                     local download = item:GetItem("Download")
-                    download.help = new_version
+                    download.help = tostring(new_version)
                     download:SetEnabled(true)
                 end
             end
@@ -584,7 +614,7 @@ function BeardLibModsMenu:SetModNeedsUpdate(module, new_version)
     else
         mod.NeedsUpdate = true
     end
-    if not table.has(self._waiting_for_update, mod) then
+    if not table.contains(self._waiting_for_update, mod) then
         table.insert(self._waiting_for_update, mod)
     end
     self._notif_id = self._notif_id or BLT.Notifications:add_notification({title = loc:text("beardlib_updates_available"), text = loc:text("beardlib_updates_available_desc"), priority = 1})
