@@ -1,0 +1,1 @@
+mods/Minimalist HUD Pro/supermod.xml

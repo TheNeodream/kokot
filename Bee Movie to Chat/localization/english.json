@@ -1,0 +1,11 @@
+{
+	"menu_beemovie_title" : "Bee Movie to Chat",
+	"menu_beemovie_toggle_enabled_title" : "Enabled",
+	"menu_beemovie_toggle_enabled_desc" : "Check this box to enable the mod.",
+	"menu_beemovie_toggle_logging_title" : "",
+	"menu_beemovie_toggle_logging_desc" : "",
+	"menu_beemovie_change_message_interval_title" : "Message Interval",
+	"menu_beemovie_change_message_interval_desc" : "Delay (in seconds) between sending each line of the Bee Movie.",
+	"menu_beemovie_dialog_enabled" : "Keyword listener and script output enabled. You can disable it again in the mod options menu, or by saying \"$word\" in chat.",
+	"menu_beemovie_dialog_disabled" : "Keyword listener and script output disabled. You can re-enable it again in the mod options menu, or by saying \"$word\" in chat."
+}

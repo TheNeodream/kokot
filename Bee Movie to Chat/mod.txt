@@ -1,0 +1,19 @@
+{
+	"name" : "Bee Movie",
+	"description" : "I wish he'd dress like that all the time. So nice!",
+	"author" : "Offyerrocker",
+	"contact" : "Discord: Offyerrocker#3878",
+	"version" : "2.1",
+	"blt_version" : 2,
+	"color" : "255 247 3",
+	"hooks" : [
+		{
+			"hook_id" : "lib/managers/menumanager",
+			"script_path" : "luascripts/menumanager.lua"
+		},
+		{
+			"hook_id" : "lib/managers/chatmanager",
+			"script_path" : "luascripts/chatmanager.lua"
+		}
+	]
+}
