@@ -1,0 +1,1031 @@
+10:22:52 AM Log:  (C:\projects\payday2-superblt\src\debug\blt_debug.cpp:124) Command line: "D:\SteamLibrary\steamapps\common\PAYDAY 2\payday2_win32_release.exe" -NewCPU
+10:22:52 AM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:350) Scanning for signatures in payday2_win32_release.exe
+10:22:52 AM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:402) Scanned for 56 signatures in 1 milliseconds with 0 cache misses
+10:22:52 AM Log:  (C:\projects\payday2-superblt\src\dbutil\DB.cpp:127) Start loading DB info
+10:22:52 AM Log:  (C:\projects\payday2-superblt\src\tweaker\wrenloader.cpp:49) [WREN] Loading module BeardLib/AssetLoader
+10:22:52 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:22:54 AM Log:  (C:\projects\payday2-superblt\src\dbutil\DB.cpp:242) Finished loading DB info: 272765 files in 2242 ms
+10:22:55 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1038) Checking for updates
+10:22:55 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:22:55 AM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:22:55 AM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'Minimalist HUD Ultimate'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'Chaos Mod'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:22:55 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:22:55 AM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:22:55 AM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:22:55 AM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'Minimalist HUD Ultimate'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'Chaos Mod'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:22:55 AM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:22:56 AM Log:  (C:\projects\payday2-superblt\src\xaudio\XAudio.cpp:142) Loaded OpenAL XAudio API
+10:22:56 AM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:300) mods/baro/kokot.lua:488: 'end' expected (to close 'function' at line 1) near '<eof>'
+
+10:22:56 AM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/tweak_data/tweakdata.lua"]:4: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:45: in main chunk
+	...
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:13: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+10:22:56 AM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:77: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:13: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+10:22:57 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:22:57 AM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:22:57 AM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:22:57 AM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:22:57 AM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:22:57 AM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:22:57 AM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:22:57 AM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:22:57 AM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:22:57 AM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:22:57 AM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:22:57 AM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:22:57 AM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:22:57 AM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:22:57 AM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:22:57 AM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:22:57 AM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:22:57 AM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:22:57 AM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:22:57 AM Lua: [INFO] [BLT] Setting up mod 'Minimalist HUD Ultimate'
+10:22:57 AM Lua: [INFO] [BLT] Setting up mod 'Chaos Mod'
+10:22:57 AM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:22:57 AM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:23:06 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://api.modworkshop.net/mods/14924/version
+10:23:06 AM Log:  (C:\projects\payday2-superblt\src\http\http.cpp:39) CURL_INITD
+10:23:06 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://api.modworkshop.net/mods/23127/version
+10:23:06 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://api.modworkshop.net/mods/24616/version
+10:23:06 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://api.modworkshop.net/mods/17160/version
+10:23:06 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://api.modworkshop.net/mods/36309/version
+10:23:07 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://sblt-update.znix.xyz/pd2update/updates/meta.php?id=payday2blt
+10:23:07 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://sblt-update.znix.xyz/pd2update/updates/meta.php?id=payday2bltwsockdll
+10:23:07 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://updates.hoppip.at/pd2-chaos-mod
+10:23:07 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://www.dropbox.com/s/0z0qdjqumi1iq7f/meta.json?raw=1
+10:23:07 AM Lua: [INFO] [Updates] Received update data for 'pd2-chaos-mod'
+10:23:07 AM Lua: [INFO] [Updates] Comparing hash data for 'pd2-chaos-mod':
+Server: 9fd7b9ded56b9bd589e0cfeadcfde5c730ec84b10baa2d00b4dfca0dd99c30d0
+ Local: 9fd7b9ded56b9bd589e0cfeadcfde5c730ec84b10baa2d00b4dfca0dd99c30d0
+10:23:07 AM Lua: [INFO] [Updates] Received update data for 'payday2blt'
+10:23:07 AM Lua: [INFO] [Updates] Received update data for 'payday2bltwsockdll'
+10:23:07 AM Lua: [INFO] [Updates] Comparing hash data for 'payday2bltwsockdll':
+Server: 8cab3518a8afd41feb6ae1214112cd957e10dc9f0f6236d4766f0635e5301344
+ Local: 8cab3518a8afd41feb6ae1214112cd957e10dc9f0f6236d4766f0635e5301344
+10:23:09 AM Lua: [INFO] [Updates] Received update data for 'the_fixes'
+10:23:55 AM Lua: [INFO] [BLT] Performing save...
+10:24:13 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:24:13 AM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:24:13 AM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'Minimalist HUD Ultimate'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'Chaos Mod'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:24:13 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:24:13 AM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:24:13 AM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:24:13 AM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'Minimalist HUD Ultimate'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'Chaos Mod'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:24:13 AM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:24:14 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:24:14 AM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:24:14 AM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:24:14 AM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:24:14 AM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:24:14 AM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:24:14 AM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:24:14 AM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:24:14 AM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:24:14 AM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:24:14 AM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:24:14 AM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:24:14 AM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:24:14 AM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:24:14 AM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:24:14 AM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:24:14 AM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:24:14 AM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:24:14 AM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:24:14 AM Lua: [INFO] [BLT] Setting up mod 'Minimalist HUD Ultimate'
+10:24:14 AM Lua: [INFO] [BLT] Setting up mod 'Chaos Mod'
+10:24:14 AM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:24:14 AM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:24:14 AM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:300) mods/baro/kokot.lua:488: 'end' expected (to close 'function' at line 1) near '<eof>'
+
+10:24:14 AM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/tweak_data/tweakdata.lua"]:4: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:45: in main chunk
+	...
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/networkgamesetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:6: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+10:24:15 AM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:77: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/gamesetup.lua"]:6: in main chunk
+	...
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/networkgamesetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:6: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+10:24:20 AM Lua: [ERROR] Could not load file 'mods/baro/options.txt'
+10:25:05 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierShowHitboxes|865474
+10:25:26 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierLowGravity|970365
+10:25:49 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierForceMelee|304885
+10:25:55 AM Lua: SA enabled true
+10:25:55 AM Lua: SK enabled false
+10:26:06 AM Lua: SA enabled true
+10:26:06 AM Lua: SK enabled false
+10:26:19 AM Lua: SA enabled true
+10:26:19 AM Lua: SK enabled false
+10:26:24 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierNoMoving|31874
+10:26:53 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierExplosiveBullets|304048
+10:26:57 AM Lua: SA enabled true
+10:26:57 AM Lua: SK enabled false
+10:26:59 AM Lua: SA enabled true
+10:26:59 AM Lua: SK enabled false
+10:28:21 AM Lua: [INFO] [BLT] Performing save...
+10:28:42 AM Lua: SA enabled true
+10:28:42 AM Lua: SK enabled false
+10:28:42 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierWeaponSwitch|305042
+10:28:44 AM Lua: SA enabled true
+10:28:44 AM Lua: SK enabled false
+10:29:08 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierForceMove|25273
+10:29:10 AM Lua: SA enabled true
+10:29:10 AM Lua: SK enabled false
+10:29:15 AM Lua: SA enabled true
+10:29:15 AM Lua: SK enabled false
+10:29:16 AM Lua: SA enabled true
+10:29:16 AM Lua: SK enabled false
+10:29:17 AM Lua: SA enabled true
+10:29:17 AM Lua: SK enabled false
+10:29:19 AM Lua: SA enabled true
+10:29:19 AM Lua: SK enabled false
+10:29:21 AM Lua: SA enabled true
+10:29:21 AM Lua: SK enabled false
+10:29:23 AM Lua: SA enabled true
+10:29:23 AM Lua: SK enabled false
+10:29:24 AM Lua: SA enabled true
+10:29:24 AM Lua: SK enabled false
+10:29:24 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierScreamingEnemies|242372
+10:29:35 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierItchyTriggerFinger|807022
+10:29:44 AM Lua: SA enabled true
+10:29:44 AM Lua: SK enabled false
+10:29:45 AM Lua: SA enabled true
+10:29:45 AM Lua: SK enabled false
+10:29:51 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierNoHeadshots|679305
+10:30:01 AM Lua: SA enabled true
+10:30:01 AM Lua: SK enabled false
+10:30:01 AM Lua: SA enabled true
+10:30:01 AM Lua: SK enabled false
+10:30:05 AM Lua: SA enabled true
+10:30:05 AM Lua: SK enabled false
+10:30:11 AM Lua: SA enabled true
+10:30:11 AM Lua: SK enabled false
+10:30:11 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierFieldOfViewIncrease|459487
+10:30:13 AM Lua: SA enabled true
+10:30:13 AM Lua: SK enabled false
+10:30:15 AM Lua: SA enabled true
+10:30:15 AM Lua: SK enabled false
+10:30:15 AM Lua: SA enabled true
+10:30:15 AM Lua: SK enabled false
+10:30:17 AM Lua: SA enabled true
+10:30:17 AM Lua: SK enabled false
+10:30:18 AM Lua: SA enabled true
+10:30:18 AM Lua: SK enabled false
+10:30:24 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierNoSound|992103
+10:30:32 AM Lua: SA enabled true
+10:30:32 AM Lua: SK enabled false
+10:30:37 AM Lua: SA enabled true
+10:30:37 AM Lua: SK enabled false
+10:30:46 AM Lua: SA enabled true
+10:30:46 AM Lua: SK enabled false
+10:30:46 AM Lua: SA enabled true
+10:30:46 AM Lua: SK enabled false
+10:30:48 AM Lua: SA enabled true
+10:30:48 AM Lua: SK enabled false
+10:30:49 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierTimeOut|608684
+10:30:51 AM Lua: SA enabled true
+10:30:51 AM Lua: SK enabled false
+10:30:53 AM Lua: SA enabled true
+10:30:53 AM Lua: SK enabled false
+10:30:55 AM Lua: SA enabled true
+10:30:55 AM Lua: SK enabled false
+10:30:55 AM Lua: SA enabled true
+10:30:55 AM Lua: SK enabled false
+10:30:58 AM Lua: SA enabled true
+10:30:58 AM Lua: SK enabled false
+10:30:58 AM Lua: SA enabled true
+10:30:58 AM Lua: SK enabled false
+10:30:59 AM Lua: SA enabled true
+10:30:59 AM Lua: SK enabled false
+10:30:59 AM Lua: SA enabled true
+10:30:59 AM Lua: SK enabled false
+10:30:59 AM Lua: SA enabled true
+10:30:59 AM Lua: SK enabled false
+10:31:01 AM Lua: SA enabled true
+10:31:01 AM Lua: SK enabled false
+10:31:01 AM Lua: SA enabled true
+10:31:01 AM Lua: SK enabled false
+10:31:03 AM Lua: SA enabled true
+10:31:03 AM Lua: SK enabled false
+10:31:05 AM Lua: SA enabled true
+10:31:05 AM Lua: SK enabled false
+10:31:05 AM Lua: SA enabled true
+10:31:05 AM Lua: SK enabled false
+10:31:06 AM Lua: SA enabled true
+10:31:06 AM Lua: SK enabled false
+10:31:06 AM Lua: SA enabled true
+10:31:06 AM Lua: SK enabled false
+10:31:08 AM Lua: SA enabled true
+10:31:08 AM Lua: SK enabled false
+10:31:09 AM Lua: SA enabled true
+10:31:09 AM Lua: SK enabled false
+10:31:10 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierSpinningEnemies|853824
+10:31:10 AM Lua: SA enabled true
+10:31:10 AM Lua: SK enabled false
+10:31:13 AM Lua: SA enabled true
+10:31:13 AM Lua: SK enabled false
+10:31:18 AM Lua: SA enabled true
+10:31:18 AM Lua: SK enabled false
+10:31:18 AM Lua: SA enabled true
+10:31:18 AM Lua: SK enabled false
+10:31:19 AM Lua: SA enabled true
+10:31:19 AM Lua: SK enabled false
+10:31:19 AM Lua: SA enabled true
+10:31:19 AM Lua: SK enabled false
+10:31:20 AM Lua: SA enabled true
+10:31:20 AM Lua: SK enabled false
+10:31:27 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierCivilianMagnet|724849
+10:31:39 AM Lua: SA enabled true
+10:31:39 AM Lua: SK enabled false
+10:31:42 AM Lua: SA enabled true
+10:31:42 AM Lua: SK enabled false
+10:31:42 AM Lua: SA enabled true
+10:31:42 AM Lua: SK enabled false
+10:31:45 AM Lua: SA enabled true
+10:31:45 AM Lua: SK enabled false
+10:31:45 AM Lua: SA enabled true
+10:31:45 AM Lua: SK enabled false
+10:31:45 AM Lua: SA enabled true
+10:31:45 AM Lua: SK enabled false
+10:31:45 AM Lua: SA enabled true
+10:31:45 AM Lua: SK enabled false
+10:31:45 AM Lua: SA enabled true
+10:31:45 AM Lua: SK enabled false
+10:31:45 AM Lua: SA enabled true
+10:31:45 AM Lua: SK enabled false
+10:31:45 AM Lua: SA enabled true
+10:31:45 AM Lua: SK enabled false
+10:31:46 AM Lua: SA enabled true
+10:31:46 AM Lua: SK enabled false
+10:31:46 AM Lua: SA enabled true
+10:31:46 AM Lua: SK enabled false
+10:31:46 AM Lua: SA enabled true
+10:31:46 AM Lua: SK enabled false
+10:31:48 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierTase|825994
+10:31:56 AM Lua: SA enabled true
+10:31:56 AM Lua: SK enabled false
+10:31:56 AM Lua: SA enabled true
+10:31:56 AM Lua: SK enabled false
+10:31:56 AM Lua: SA enabled true
+10:31:56 AM Lua: SK enabled false
+10:31:59 AM Lua: SA enabled true
+10:31:59 AM Lua: SK enabled false
+10:32:00 AM Lua: SA enabled true
+10:32:00 AM Lua: SK enabled false
+10:32:01 AM Lua: SA enabled true
+10:32:01 AM Lua: SK enabled false
+10:32:05 AM Lua: SA enabled true
+10:32:05 AM Lua: SK enabled false
+10:32:06 AM Lua: SA enabled true
+10:32:06 AM Lua: SK enabled false
+10:32:07 AM Lua: SA enabled true
+10:32:07 AM Lua: SK enabled false
+10:32:14 AM Lua: SA enabled true
+10:32:14 AM Lua: SK enabled false
+10:32:14 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierExplosiveBullets|303489
+10:32:14 AM Lua: SA enabled true
+10:32:14 AM Lua: SK enabled false
+10:32:14 AM Lua: SA enabled true
+10:32:14 AM Lua: SK enabled false
+10:32:15 AM Lua: SA enabled true
+10:32:15 AM Lua: SK enabled false
+10:32:23 AM Lua: SA enabled true
+10:32:23 AM Lua: SK enabled false
+10:32:24 AM Lua: SA enabled true
+10:32:24 AM Lua: SK enabled false
+10:32:24 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierNoHeadshots|411304
+10:32:25 AM Lua: SA enabled true
+10:32:25 AM Lua: SK enabled false
+10:32:25 AM Lua: SA enabled true
+10:32:25 AM Lua: SK enabled false
+10:32:28 AM Lua: SA enabled true
+10:32:28 AM Lua: SK enabled false
+10:32:32 AM Lua: SA enabled true
+10:32:32 AM Lua: SK enabled false
+10:32:34 AM Lua: SA enabled true
+10:32:34 AM Lua: SK enabled false
+10:32:34 AM Lua: SA enabled true
+10:32:34 AM Lua: SK enabled false
+10:32:35 AM Lua: SA enabled true
+10:32:35 AM Lua: SK enabled false
+10:32:40 AM Lua: SA enabled true
+10:32:40 AM Lua: SK enabled false
+10:32:47 AM Lua: SA enabled true
+10:32:47 AM Lua: SK enabled false
+10:32:48 AM Lua: SA enabled true
+10:32:48 AM Lua: SK enabled false
+10:32:50 AM Lua: SA enabled true
+10:32:50 AM Lua: SK enabled false
+10:32:50 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierHeadshotsOnly|708029
+10:32:51 AM Lua: SA enabled true
+10:32:51 AM Lua: SK enabled false
+10:32:52 AM Lua: SA enabled true
+10:32:52 AM Lua: SK enabled false
+10:32:54 AM Lua: SA enabled true
+10:32:54 AM Lua: SK enabled false
+10:33:00 AM Lua: SA enabled true
+10:33:00 AM Lua: SK enabled false
+10:33:00 AM Lua: SA enabled true
+10:33:00 AM Lua: SK enabled false
+10:33:01 AM Lua: SA enabled true
+10:33:01 AM Lua: SK enabled false
+10:33:06 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierNoSound|487615
+10:33:10 AM Lua: SA enabled true
+10:33:10 AM Lua: SK enabled false
+10:33:13 AM Lua: SA enabled true
+10:33:13 AM Lua: SK enabled false
+10:33:20 AM Lua: SA enabled true
+10:33:20 AM Lua: SK enabled false
+10:33:24 AM Lua: SA enabled true
+10:33:24 AM Lua: SK enabled false
+10:33:27 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierShoutToKill|816577
+10:33:29 AM Lua: SA enabled true
+10:33:29 AM Lua: SK enabled false
+10:33:29 AM Lua: SA enabled true
+10:33:29 AM Lua: SK enabled false
+10:33:30 AM Lua: SA enabled true
+10:33:30 AM Lua: SK enabled false
+10:33:30 AM Lua: SA enabled true
+10:33:30 AM Lua: SK enabled false
+10:33:31 AM Lua: SA enabled true
+10:33:31 AM Lua: SK enabled false
+10:33:31 AM Lua: SA enabled true
+10:33:31 AM Lua: SK enabled false
+10:33:36 AM Lua: SA enabled true
+10:33:36 AM Lua: SK enabled false
+10:33:38 AM Lua: SA enabled true
+10:33:38 AM Lua: SK enabled false
+10:33:40 AM Lua: SA enabled true
+10:33:40 AM Lua: SK enabled false
+10:33:41 AM Lua: SA enabled true
+10:33:41 AM Lua: SK enabled false
+10:33:43 AM Lua: SA enabled true
+10:33:43 AM Lua: SK enabled false
+10:33:44 AM Lua: SA enabled true
+10:33:44 AM Lua: SK enabled false
+10:33:44 AM Lua: SA enabled true
+10:33:44 AM Lua: SK enabled false
+10:33:46 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierCombustJokers|394125
+10:33:47 AM Lua: SA enabled true
+10:33:47 AM Lua: SK enabled false
+10:33:49 AM Lua: SA enabled true
+10:33:49 AM Lua: SK enabled false
+10:33:52 AM Lua: SA enabled true
+10:33:52 AM Lua: SK enabled false
+10:33:53 AM Lua: SA enabled true
+10:33:53 AM Lua: SK enabled false
+10:33:56 AM Lua: SA enabled true
+10:33:56 AM Lua: SK enabled false
+10:33:58 AM Lua: SA enabled true
+10:33:58 AM Lua: SK enabled false
+10:34:02 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierConcussionBullets|782910
+10:34:06 AM Lua: SA enabled true
+10:34:06 AM Lua: SK enabled false
+10:34:12 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierSpeedUp|759885
+10:34:13 AM Lua: SA enabled true
+10:34:13 AM Lua: SK enabled false
+10:34:16 AM Lua: SA enabled true
+10:34:16 AM Lua: SK enabled false
+10:34:19 AM Lua: SA enabled true
+10:34:19 AM Lua: SK enabled false
+10:34:24 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:34:24 AM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:34:24 AM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Minimalist HUD Ultimate'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Chaos Mod'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:34:24 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:34:24 AM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:34:24 AM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Minimalist HUD Ultimate'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Chaos Mod'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:34:24 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:34:24 AM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:34:24 AM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:34:24 AM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Minimalist HUD Ultimate'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'Chaos Mod'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:34:24 AM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:34:25 AM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:300) mods/baro/kokot.lua:488: 'end' expected (to close 'function' at line 1) near '<eof>'
+
+10:34:25 AM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/tweak_data/tweakdata.lua"]:4: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:45: in main chunk
+	...
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/networkgamesetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:6: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+10:34:25 AM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:77: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/gamesetup.lua"]:6: in main chunk
+	...
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/networkgamesetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:6: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+10:34:28 AM Lua: [ERROR] Could not load file 'mods/baro/options.txt'
+10:34:44 AM Lua: SA enabled true
+10:34:44 AM Lua: SK enabled false
+10:34:45 AM Lua: SA enabled true
+10:34:45 AM Lua: SK enabled false
+10:34:48 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierFireTrail|255946
+10:34:48 AM Lua: SA enabled true
+10:34:48 AM Lua: SK enabled false
+10:34:49 AM Lua: SA enabled true
+10:34:49 AM Lua: SK enabled false
+10:34:50 AM Lua: SA enabled true
+10:34:50 AM Lua: SK enabled false
+10:34:51 AM Lua: SA enabled true
+10:34:51 AM Lua: SK enabled false
+10:34:52 AM Lua: SA enabled true
+10:34:52 AM Lua: SK enabled false
+10:34:53 AM Lua: SA enabled true
+10:34:53 AM Lua: SK enabled false
+10:34:53 AM Lua: SA enabled true
+10:34:53 AM Lua: SK enabled false
+10:34:54 AM Lua: SA enabled true
+10:34:54 AM Lua: SK enabled false
+10:34:55 AM Lua: SA enabled true
+10:34:55 AM Lua: SK enabled false
+10:35:09 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierDallasMedicBag|203224
+10:35:14 AM Lua: SA enabled true
+10:35:14 AM Lua: SK enabled false
+10:35:24 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierForceMelee|493339
+10:35:27 AM Lua: SA enabled true
+10:35:27 AM Lua: SK enabled false
+10:35:28 AM Lua: SA enabled true
+10:35:28 AM Lua: SK enabled false
+10:35:33 AM Lua: SA enabled true
+10:35:33 AM Lua: SK enabled false
+10:35:34 AM Lua: SA enabled true
+10:35:34 AM Lua: SK enabled false
+10:35:34 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierHeadshotsOnly|100618
+10:35:38 AM Lua: SA enabled true
+10:35:38 AM Lua: SK enabled false
+10:35:39 AM Lua: SA enabled true
+10:35:39 AM Lua: SK enabled false
+10:35:46 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierRefreshModifers|698302
+10:35:47 AM Lua: SA enabled true
+10:35:47 AM Lua: SK enabled false
+10:35:57 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierNoSleep|390098
+10:36:11 AM Lua: SA enabled true
+10:36:11 AM Lua: SK enabled false
+10:36:17 AM Lua: SA enabled true
+10:36:17 AM Lua: SK enabled false
+10:36:17 AM Lua: SA enabled true
+10:36:17 AM Lua: SK enabled false
+10:36:19 AM Lua: SA enabled true
+10:36:19 AM Lua: SK enabled false
+10:36:21 AM Lua: SA enabled true
+10:36:21 AM Lua: SK enabled false
+10:36:23 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierRandomPush|727813
+10:36:27 AM Lua: SA enabled true
+10:36:27 AM Lua: SK enabled false
+10:36:32 AM Lua: SA enabled true
+10:36:32 AM Lua: SK enabled false
+10:36:33 AM Lua: SA enabled true
+10:36:33 AM Lua: SK enabled false
+10:36:33 AM Lua: SA enabled true
+10:36:33 AM Lua: SK enabled false
+10:36:34 AM Lua: SA enabled true
+10:36:34 AM Lua: SK enabled false
+10:36:35 AM Lua: SA enabled true
+10:36:35 AM Lua: SK enabled false
+10:36:41 AM Lua: SA enabled true
+10:36:41 AM Lua: SK enabled false
+10:36:43 AM Lua: SA enabled true
+10:36:43 AM Lua: SK enabled false
+10:36:46 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierSpeedUp|162126
+10:36:48 AM Lua: SA enabled true
+10:36:48 AM Lua: SK enabled false
+10:36:49 AM Lua: SA enabled true
+10:36:49 AM Lua: SK enabled false
+10:36:51 AM Lua: SA enabled true
+10:36:51 AM Lua: SK enabled false
+10:36:52 AM Lua: SA enabled true
+10:36:52 AM Lua: SK enabled false
+10:36:59 AM Lua: SA enabled true
+10:36:59 AM Lua: SK enabled false
+10:37:03 AM Lua: SA enabled true
+10:37:03 AM Lua: SK enabled false
+10:37:03 AM Lua: SA enabled true
+10:37:03 AM Lua: SK enabled false
+10:37:06 AM Lua: SA enabled true
+10:37:06 AM Lua: SK enabled false
+10:37:12 AM Lua: SA enabled true
+10:37:12 AM Lua: SK enabled false
+10:37:13 AM Lua: SA enabled true
+10:37:13 AM Lua: SK enabled false
+10:37:13 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierTimeStop|880129
+10:37:30 AM Lua: SA enabled true
+10:37:30 AM Lua: SK enabled false
+10:37:31 AM Lua: SA enabled true
+10:37:31 AM Lua: SK enabled false
+10:37:31 AM Lua: SA enabled true
+10:37:31 AM Lua: SK enabled false
+10:37:32 AM Lua: SA enabled true
+10:37:32 AM Lua: SK enabled false
+10:37:33 AM Lua: SA enabled true
+10:37:33 AM Lua: SK enabled false
+10:37:36 AM Lua: SA enabled true
+10:37:36 AM Lua: SK enabled false
+10:37:36 AM Lua: SA enabled true
+10:37:36 AM Lua: SK enabled false
+10:37:37 AM Lua: SA enabled true
+10:37:37 AM Lua: SK enabled false
+10:37:37 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierCrabPeople|161592
+10:37:40 AM Lua: SA enabled true
+10:37:40 AM Lua: SK enabled false
+10:37:44 AM Lua: SA enabled true
+10:37:44 AM Lua: SK enabled false
+10:37:46 AM Lua: SA enabled true
+10:37:46 AM Lua: SK enabled false
+10:37:48 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierForceMelee|52131
+10:37:55 AM Lua: SA enabled true
+10:37:55 AM Lua: SK enabled false
+10:37:57 AM Lua: SA enabled true
+10:37:57 AM Lua: SK enabled false
+10:37:59 AM Lua: SA enabled true
+10:37:59 AM Lua: SK enabled false
+10:38:02 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierRandomCallouts|79165
+10:38:06 AM Lua: SA enabled true
+10:38:06 AM Lua: SK enabled false
+10:38:06 AM Lua: SA enabled true
+10:38:06 AM Lua: SK enabled false
+10:38:09 AM Lua: SA enabled true
+10:38:09 AM Lua: SK enabled false
+10:38:09 AM Lua: SA enabled true
+10:38:09 AM Lua: SK enabled false
+10:38:09 AM Lua: SA enabled true
+10:38:09 AM Lua: SK enabled false
+10:38:09 AM Lua: SA enabled true
+10:38:09 AM Lua: SK enabled false
+10:38:09 AM Lua: SA enabled true
+10:38:09 AM Lua: SK enabled false
+10:38:11 AM Lua: SA enabled true
+10:38:11 AM Lua: SK enabled false
+10:38:11 AM Lua: SA enabled true
+10:38:11 AM Lua: SK enabled false
+10:38:16 AM Lua: SA enabled true
+10:38:16 AM Lua: SK enabled false
+10:38:16 AM Lua: SA enabled true
+10:38:16 AM Lua: SK enabled false
+10:38:20 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierNoJumping|925181
+10:38:23 AM Lua: SA enabled true
+10:38:23 AM Lua: SK enabled false
+10:38:24 AM Lua: SA enabled true
+10:38:24 AM Lua: SK enabled false
+10:38:24 AM Lua: SA enabled true
+10:38:24 AM Lua: SK enabled false
+10:38:26 AM Lua: SA enabled true
+10:38:26 AM Lua: SK enabled false
+10:38:26 AM Lua: SA enabled true
+10:38:26 AM Lua: SK enabled false
+10:38:26 AM Lua: SA enabled true
+10:38:26 AM Lua: SK enabled false
+10:38:27 AM Lua: SA enabled true
+10:38:27 AM Lua: SK enabled false
+10:38:28 AM Lua: SA enabled true
+10:38:28 AM Lua: SK enabled false
+10:38:31 AM Lua: SA enabled true
+10:38:31 AM Lua: SK enabled false
+10:38:31 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierSubsOverDubs|449262
+10:38:34 AM Lua: SA enabled true
+10:38:34 AM Lua: SK enabled false
+10:38:37 AM Lua: SA enabled true
+10:38:37 AM Lua: SK enabled false
+10:38:38 AM Lua: SA enabled true
+10:38:38 AM Lua: SK enabled false
+10:38:40 AM Lua: SA enabled true
+10:38:40 AM Lua: SK enabled false
+10:38:43 AM Lua: SA enabled true
+10:38:43 AM Lua: SK enabled false
+10:38:46 AM Lua: SA enabled true
+10:38:46 AM Lua: SK enabled false
+10:38:47 AM Lua: SA enabled true
+10:38:47 AM Lua: SK enabled false
+10:38:48 AM Lua: SA enabled true
+10:38:48 AM Lua: SK enabled false
+10:38:51 AM Lua: SA enabled true
+10:38:51 AM Lua: SK enabled false
+10:38:53 AM Lua: SA enabled true
+10:38:53 AM Lua: SK enabled false
+10:38:53 AM Lua: SA enabled true
+10:38:53 AM Lua: SK enabled false
+10:38:54 AM Lua: SA enabled true
+10:38:54 AM Lua: SK enabled false
+10:38:56 AM Lua: SA enabled true
+10:38:56 AM Lua: SK enabled false
+10:38:56 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierGlassCannons|236673
+10:38:58 AM Lua: SA enabled true
+10:38:58 AM Lua: SK enabled false
+10:39:01 AM Lua: SA enabled true
+10:39:01 AM Lua: SK enabled false
+10:39:02 AM Lua: SA enabled true
+10:39:02 AM Lua: SK enabled false
+10:39:02 AM Lua: SA enabled true
+10:39:02 AM Lua: SK enabled false
+10:39:02 AM Lua: SA enabled true
+10:39:02 AM Lua: SK enabled false
+10:39:06 AM Lua: SA enabled true
+10:39:06 AM Lua: SK enabled false
+10:39:07 AM Lua: SA enabled true
+10:39:07 AM Lua: SK enabled false
+10:39:07 AM Lua: SA enabled true
+10:39:07 AM Lua: SK enabled false
+10:39:12 AM Lua: SA enabled true
+10:39:12 AM Lua: SK enabled false
+10:39:14 AM Lua: SA enabled true
+10:39:14 AM Lua: SK enabled false
+10:39:18 AM Lua: SA enabled true
+10:39:18 AM Lua: SK enabled false
+10:39:21 AM Lua: SA enabled true
+10:39:21 AM Lua: SK enabled false
+10:39:22 AM Lua: SA enabled true
+10:39:22 AM Lua: SK enabled false
+10:39:24 AM Lua: [INFO] [NetworkHelper] the: GNAP/ActivateChaosModifier/ChaosModifierPushUp|337167
+10:39:28 AM Lua: SA enabled true
+10:39:28 AM Lua: SK enabled false
+10:39:30 AM Lua: SA enabled true
+10:39:30 AM Lua: SK enabled false
+10:39:30 AM Lua: SA enabled true
+10:39:30 AM Lua: SK enabled false
+10:39:31 AM Lua: SA enabled true
+10:39:31 AM Lua: SK enabled false
+10:39:31 AM Lua: SA enabled true
+10:39:31 AM Lua: SK enabled false
+10:39:32 AM Lua: SA enabled true
+10:39:32 AM Lua: SK enabled false
+10:39:34 AM Lua: SA enabled true
+10:39:34 AM Lua: SK enabled false
+10:39:35 AM Lua: SA enabled true
+10:39:35 AM Lua: SK enabled false
+10:39:35 AM Lua: SA enabled true
+10:39:35 AM Lua: SK enabled false
+10:39:37 AM Lua: SA enabled true
+10:39:37 AM Lua: SK enabled false
+10:39:43 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:39:43 AM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:39:43 AM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Minimalist HUD Ultimate'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Chaos Mod'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:39:43 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:39:43 AM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:39:43 AM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Minimalist HUD Ultimate'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Chaos Mod'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:39:43 AM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:39:43 AM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:39:43 AM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:39:43 AM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Minimalist HUD Ultimate'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'Chaos Mod'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:39:43 AM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:39:44 AM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:300) mods/baro/kokot.lua:488: 'end' expected (to close 'function' at line 1) near '<eof>'
+
+10:39:44 AM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/tweak_data/tweakdata.lua"]:4: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:45: in main chunk
+	...
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:8: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+10:39:44 AM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:77: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:8: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+

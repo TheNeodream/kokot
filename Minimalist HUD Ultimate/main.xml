@@ -1,0 +1,7 @@
+<mod name="Minimalist HUD Ultimate" author="Offyerrocker" color="Color(0.6,0.9,1)" global_key="MHUDUCore" core_class="MHUDUCore.lua">
+	<Localization directory="localization" default="en.json">
+		<loc file="en.json" language="english" />
+	</Localization>
+	
+	<AssetUpdates id="36309" version="0.0.5" provider="modworkshop" install_directory = "mods/"/>
+</mod>

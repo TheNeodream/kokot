@@ -1,0 +1,21 @@
+{
+	"name" : "Chaos Mod",
+	"description" : "Enables random modifiers during gameplay",
+	"author" : "Hoppip",
+	"color" : "0.043 0.808 0.6",
+	"image" : "mod.png",
+	"version" : "1.4.0",
+	"updates" : [{
+		"identifier" : "pd2-chaos-mod",
+		"host": { "meta": "https://updates.hoppip.at/pd2-chaos-mod" }
+	}],
+	"hooks" : [
+		{ "hook_id" : "lib/managers/hudmanager", "script_path" : "mod.lua" },
+		{ "hook_id" : "lib/managers/menumanager", "script_path" : "mod.lua" },
+		{ "hook_id" : "lib/managers/missionmanager", "script_path" : "mod.lua" },
+		{ "hook_id" : "lib/network/base/networkmanager", "script_path" : "mod.lua" },
+		{ "hook_id" : "lib/tweak_data/charactertweakdata", "script_path" : "mod.lua" },
+		{ "hook_id" : "lib/tweak_data/groupaitweakdata", "script_path" : "mod.lua" },
+		{ "hook_id" : "lib/units/props/timergui", "script_path" : "mod.lua" }
+	]
+}

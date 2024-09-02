@@ -1,0 +1,95 @@
+todo:
+	- option to hide vanilla hud 
+	
+	- go over enabled/disabled mid-heist behavior
+		- require restart to affect changes? or only for enabling addons? <-- probably this
+		- destroy addon panels and call unregister listeners when addon is to be removed (ie when user disables it)
+		- implement destroy function
+	- hud categories
+		- re-check categories at any change (user changing any addon toggles)
+	- toggle/button for manually enabling/disabling an addon
+
+	- develop clippy more
+		- speech text
+		- movement
+
+post-release:
+	- auto-updater for addons
+		- hook system for advanced addons to allow beardlib auto-updating addons
+		-backport to ach
+
+
+
+concepts:
+
+
+	- every 5 minutes, a new hud element appears
+	- favor elements that have not been picked (sort by tag)
+
+
+		
+
+	hud element categories:
+		actual:
+			- health
+			- ammo
+			- deployables
+			- grenades/ability
+			- armor
+			- teammates
+			- mission equipment 
+			- cable ties
+			- hostages
+			
+		not very useful:
+			- crosshair
+			- pagers
+			- money
+			- level
+			- loot
+			- chat?
+			
+		completely superfluous:
+			- date / time
+			- temperature
+			- killstreak
+
+--[[
+	"health_own",
+	"armor_own",
+	"grenades_own",
+	"health_team",
+	"armor_team",
+	"grenades_team"
+--]]
+
+
+	hud concepts list:
+
+
+		general concepts:
+			monster hunter
+			deep rock galactic?
+			untitled goose game goose?
+			the division
+			dishonored
+			gungeon
+			gtfo
+			hunt showdown
+			icarus?
+			l4d/other source games?
+			apex legends?
+			don't starve together
+			helltaker
+			talos principle
+			rainbow 6 siege
+			--when you go down, your bots will send a team chat message saying "skill issue" with semirandom delays
+			--when you use a doctor bag with 0 downs, show fallout 4 "everyone disliked that" text
+			
+		from the video: https://www.youtube.com/watch?v=jAymJW63PLk
+		
+		new elements:
+			persona 4 date/time
+			ffxiv team counter
+				-level up noise https://www.youtube.com/watch?v=DAHx3yUEnGU
+			tf2 mission timer

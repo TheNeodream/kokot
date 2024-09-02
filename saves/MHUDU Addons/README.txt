@@ -1,0 +1,1 @@
+Addons go here! They should be in the same format as the ones in the Base Addons folder, but don't put any new ones in there, or else they'll be overridden if you update MHUDU.

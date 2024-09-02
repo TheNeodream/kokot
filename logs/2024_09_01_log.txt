@@ -557,3 +557,392 @@ Server: 8cab3518a8afd41feb6ae1214112cd957e10dc9f0f6236d4766f0635e5301344
  Local: 8cab3518a8afd41feb6ae1214112cd957e10dc9f0f6236d4766f0635e5301344
 09:56:28 PM Log:  (C:\projects\payday2-superblt\src\http\http.cpp:44) CURL CLOSED
 09:56:28 PM Log:  (C:\projects\payday2-superblt\src\xaudio\XAudio.cpp:147) Closing OpenAL XAudio API
+10:06:43 PM Log:  (C:\projects\payday2-superblt\src\debug\blt_debug.cpp:124) Command line: "D:\SteamLibrary\steamapps\common\PAYDAY 2\payday2_win32_release.exe" -NewCPU
+10:06:43 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:350) Scanning for signatures in payday2_win32_release.exe
+10:06:43 PM Log:  (C:\projects\payday2-superblt\platforms\w32\signatures\signatures.cpp:402) Scanned for 56 signatures in 1 milliseconds with 0 cache misses
+10:06:43 PM Log:  (C:\projects\payday2-superblt\src\dbutil\DB.cpp:127) Start loading DB info
+10:06:44 PM Log:  (C:\projects\payday2-superblt\src\tweaker\wrenloader.cpp:49) [WREN] Loading module BeardLib/AssetLoader
+10:06:44 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:06:45 PM Log:  (C:\projects\payday2-superblt\src\dbutil\DB.cpp:242) Finished loading DB info: 272765 files in 2003 ms
+10:06:47 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1038) Checking for updates
+10:06:47 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:06:47 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:06:47 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:06:47 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:06:47 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:06:47 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:06:47 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:06:47 PM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:06:47 PM Log:  (C:\projects\payday2-superblt\src\xaudio\XAudio.cpp:142) Loaded OpenAL XAudio API
+10:06:47 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:300) mods/baro/kokot.lua:488: 'end' expected (to close 'function' at line 1) near '<eof>'
+
+10:06:47 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/tweak_data/tweakdata.lua"]:4: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:45: in main chunk
+	...
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:13: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+10:06:48 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:77: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:13: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+10:06:49 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:06:49 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:06:49 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:06:49 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:06:49 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:06:49 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:06:49 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:06:49 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:06:49 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:06:49 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:06:49 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:06:49 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:06:49 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:06:49 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:06:49 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:06:49 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:06:49 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:06:49 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:06:49 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:06:49 PM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:06:49 PM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:06:58 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://api.modworkshop.net/mods/14924/version
+10:06:58 PM Log:  (C:\projects\payday2-superblt\src\http\http.cpp:39) CURL_INITD
+10:06:58 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://api.modworkshop.net/mods/23127/version
+10:06:58 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://api.modworkshop.net/mods/24616/version
+10:06:58 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://api.modworkshop.net/mods/17160/version
+10:06:58 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://sblt-update.znix.xyz/pd2update/updates/meta.php?id=payday2blt
+10:06:58 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://sblt-update.znix.xyz/pd2update/updates/meta.php?id=payday2bltwsockdll
+10:06:58 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:486) HTTP request to https://www.dropbox.com/s/0z0qdjqumi1iq7f/meta.json?raw=1
+10:06:59 PM Lua: [INFO] [Updates] Received update data for 'payday2blt'
+10:06:59 PM Lua: [INFO] [Updates] Received update data for 'payday2bltwsockdll'
+10:06:59 PM Lua: [INFO] [Updates] Comparing hash data for 'payday2bltwsockdll':
+Server: 8cab3518a8afd41feb6ae1214112cd957e10dc9f0f6236d4766f0635e5301344
+ Local: 8cab3518a8afd41feb6ae1214112cd957e10dc9f0f6236d4766f0635e5301344
+10:07:00 PM Lua: [INFO] [Updates] Received update data for 'the_fixes'
+10:07:11 PM Lua: [INFO] [BLT] Performing save...
+10:07:23 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:07:23 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:07:23 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:07:23 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:07:23 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:07:23 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:07:23 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:07:23 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:07:23 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:07:23 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:07:23 PM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:07:24 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:300) mods/baro/kokot.lua:488: 'end' expected (to close 'function' at line 1) near '<eof>'
+
+10:07:24 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/tweak_data/tweakdata.lua"]:4: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:45: in main chunk
+	...
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/networkgamesetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:6: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+10:07:24 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:77: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/gamesetup.lua"]:6: in main chunk
+	...
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/networkgamesetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:6: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+10:07:25 PM Lua: [ERROR] Could not load file 'mods/baro/options.txt'
+10:08:43 PM Lua: [INFO] [BLT] Performing save...
+10:08:59 PM Lua: [INFO] [BLT] Performing save...
+10:09:09 PM Lua: SA enabled true
+10:09:09 PM Lua: SK enabled false
+10:09:09 PM Lua: SA enabled true
+10:09:09 PM Lua: SK enabled false
+10:09:12 PM Lua: SA enabled true
+10:09:12 PM Lua: SK enabled false
+10:09:16 PM Lua: SA enabled true
+10:09:16 PM Lua: SK enabled false
+10:09:21 PM Lua: SA enabled true
+10:09:21 PM Lua: SK enabled false
+10:09:46 PM Lua: [INFO] [BLT] Performing save...
+10:09:56 PM Lua: SA enabled true
+10:09:56 PM Lua: SK enabled false
+10:10:13 PM Lua: SA enabled true
+10:10:13 PM Lua: SK enabled false
+10:10:16 PM Lua: SA enabled true
+10:10:16 PM Lua: SK enabled false
+10:10:18 PM Lua: SA enabled true
+10:10:18 PM Lua: SK enabled false
+10:10:22 PM Lua: SA enabled true
+10:10:22 PM Lua: SK enabled false
+10:10:24 PM Lua: SA enabled true
+10:10:24 PM Lua: SK enabled false
+10:10:28 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:10:28 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:10:28 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:10:28 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:10:28 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:10:28 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:10:28 PM Log:  (C:\projects\payday2-superblt\src\InitiateState.cpp:1007) Initiating Hook
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTLogs'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTModManager'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTDownloadManager'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTKeybindsManager'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTPersistScripts'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTLocalization'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTNotificationsManager'
+10:10:28 PM Lua: [INFO] [BLT] Loading module 'BLTAssetManager'
+10:10:28 PM Lua: [INFO] [BLT] Cleaning logs folder, lifetime 1 day(s)
+10:10:28 PM Lua: [WARN] [BLT] Could not read or find mod.txt in mods/XXX DAYS SINCE LAST CRASH/
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'SuperBLT'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'KOKOT'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'BeardLib'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'Spin Gage Package'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'EXTREMELY LOUD INCORRECT BUZZER [Medic Healing]'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'Skills Randomizer'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'Replaces flashbangs with the lobster meme'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'Menu Backgrounds'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'CustomFOV'
+10:10:28 PM Lua: [INFO] [BLT] Setting up mod 'The Fixes'
+10:10:29 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:300) mods/baro/kokot.lua:488: 'end' expected (to close 'function' at line 1) near '<eof>'
+
+10:10:29 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/tweak_data/tweakdata.lua"]:4: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:45: in main chunk
+	...
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:8: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
+10:10:29 PM FATAL ERROR:  (C:\projects\payday2-superblt\src\InitiateState.cpp:320) mods/baro/SilentAssassin.lua:14: attempt to index global 'CopLogicIntimidated' (a nil value)
+stack traceback:
+	mods/baro/SilentAssassin.lua:14: in main chunk
+	[C]: in function 'dofile'
+	mods/base/base.lua:174: in function 'RunHookFile'
+	mods/base/base.lua:162: in function 'RunHookTable'
+	mods/base/base.lua:194: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/setup.lua"]:77: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/setups/menusetup.lua"]:1: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "lib/entry.lua"]:8: in main chunk
+	[C]: in function 'require'
+	mods/base/base.lua:193: in function 'OrigRequire'
+	mods/BeardLib/Core.lua:419: in function 'require'
+	[string "core/lib/coreentry.lua"]:19: in main chunk
+
